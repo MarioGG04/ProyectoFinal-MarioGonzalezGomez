@@ -5,21 +5,26 @@
 package Vista;
 
 import com.formdev.flatlaf.FlatLightLaf;
-import com.formdev.flatlaf.intellijthemes.FlatLightFlatIJTheme;
+import java.awt.Color;
+import javax.swing.JPanel;
+
 /**
  *
  * @author Mario González Gómez
  */
 public class login extends javax.swing.JFrame {
 
-   
+   //SplashScreen cargar = new SplashScreen();
     /**
      * Creates new form login
      */
     public login() {
         initComponents();
-        
-        jButton1.putClientProperty( "JButton.buttonType", "roundRect" );   
+        Iniciar inicio=new Iniciar();       
+        mostrarPanel(inicio);
+        FlatLightLaf.setup();
+        //cargar.mostrar();
+        //continuar.putClientProperty( "FlatLaf.style", "arc: 5");   
     }
 
     /**
@@ -31,104 +36,29 @@ public class login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
-        lbl1 = new javax.swing.JLabel();
-        jSeparator1 = new javax.swing.JSeparator();
-        jTextField1 = new javax.swing.JTextField();
-        jLabel1 = new javax.swing.JLabel();
-        continuar = new javax.swing.JButton();
-        jButton1 = new javax.swing.JButton();
+        panelMov = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setLocation(new java.awt.Point(0, 0));
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-
-        lbl1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        lbl1.setText("Iniciar sesión o Registrarse");
-
-        jTextField1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jTextField1.setText("Intruduce Email");
-        jTextField1.setToolTipText("Introduce tu correo electrónico");
-        jTextField1.setPreferredSize(new java.awt.Dimension(536, 60));
-        jTextField1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField1ActionPerformed(evt);
-            }
-        });
-
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(153, 153, 153));
-        jLabel1.setText("Email");
-
-        continuar.setBackground(new java.awt.Color(154, 154, 154));
-        continuar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        continuar.setForeground(new java.awt.Color(255, 255, 255));
-        continuar.setText("Continuar");
-        continuar.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                continuarActionPerformed(evt);
-            }
-        });
-
-        jButton1.setText("jButton1");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(continuar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(124, 124, 124)
-                        .addComponent(jButton1))
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jSeparator1)
-                        .addComponent(lbl1)
-                        .addComponent(jTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, 538, Short.MAX_VALUE)))
-                .addContainerGap(44, Short.MAX_VALUE))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(30, 30, 30)
-                .addComponent(lbl1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(44, 44, 44)
-                .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(83, 83, 83)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(continuar, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jButton1))
-                .addContainerGap(121, Short.MAX_VALUE))
-        );
+        panelMov.setBackground(new java.awt.Color(255, 255, 255));
+        panelMov.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
 
         pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void jTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField1ActionPerformed
-
-    private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_continuarActionPerformed
     
     
     /**
@@ -157,25 +87,29 @@ public class login extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-        FlatLightLaf.setup();
-        SplashScreen cargar = new SplashScreen();
+
+        
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
-   
+           
             public void run() {
-                cargar.mostrar();
                 new login().setVisible(true);
             }
         });
     }
+    public void mostrarPanel(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(500,400);
+        p.setLocation(0,0);   
+
+        //quitamos la ventana anterior y mostramos la nueva
+        panelMov.removeAll();
+        panelMov.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        panelMov.revalidate();
+        panelMov.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton continuar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JPanel jPanel1;
-    private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JLabel lbl1;
+    private javax.swing.JPanel panelMov;
     // End of variables declaration//GEN-END:variables
 }
