@@ -20,8 +20,8 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
-        Iniciar inicio=new Iniciar();       
-        mostrarPanel(inicio);
+        //Iniciar inicio=new Iniciar();       
+        //mostrarPanel(inicio);
         FlatLightLaf.setup();
         //cargar.mostrar();
         //continuar.putClientProperty( "FlatLaf.style", "arc: 5");   
@@ -37,28 +37,98 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         panelMov = new javax.swing.JPanel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
+        jSeparator1 = new javax.swing.JSeparator();
+        lbl1 = new javax.swing.JLabel();
+        cerrar = new javax.swing.JPanel();
+        lblX = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
-        setUndecorated(true);
 
         panelMov.setBackground(new java.awt.Color(255, 255, 255));
         panelMov.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jButton1.setText("Iniciar");
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        panelMov.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 160, -1, -1));
+
+        jButton2.setText("Registrar");
+        jButton2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton2ActionPerformed(evt);
+            }
+        });
+        panelMov.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 160, -1, -1));
+        panelMov.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
+
+        lbl1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        lbl1.setText("Iniciar sesión / Registrarse");
+        panelMov.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+
+        cerrar.setBackground(new java.awt.Color(255, 255, 255));
+        cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                cerrarMouseClicked(evt);
+            }
+            public void mouseEntered(java.awt.event.MouseEvent evt) {
+                cerrarMouseEntered(evt);
+            }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+                cerrarMouseExited(evt);
+            }
+        });
+        cerrar.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        lblX.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        lblX.setText("X");
+        cerrar.add(lblX, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 20, 30));
+
+        panelMov.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 580, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 361, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       Iniciar iniciar = new Iniciar();
+       mostrarPanel(iniciar);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        Registro reg = new Registro();
+        setSize(600, 600);
+        mostrarPanel(reg);
+        
+    }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_cerrarMouseClicked
+
+    private void cerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseEntered
+        lblX.setForeground(Color.red);
+    }//GEN-LAST:event_cerrarMouseEntered
+
+    private void cerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseExited
+        lblX.setForeground(Color.black);
+    }//GEN-LAST:event_cerrarMouseExited
     
     
     /**
@@ -108,8 +178,25 @@ public class login extends javax.swing.JFrame {
         panelMov.revalidate();
         panelMov.repaint();
     }
+    public void mostrarPanel2(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(570, 584);
+        p.setLocation(0,0);   
+
+        //quitamos la ventana anterior y mostramos la nueva
+        panelMov.removeAll();
+        panelMov.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        panelMov.revalidate();
+        panelMov.repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JPanel cerrar;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JLabel lbl1;
+    private javax.swing.JLabel lblX;
     private javax.swing.JPanel panelMov;
     // End of variables declaration//GEN-END:variables
 }

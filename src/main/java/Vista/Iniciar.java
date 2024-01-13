@@ -5,6 +5,7 @@
 package Vista;
 
 import java.awt.Color;
+import javax.swing.JPanel;
 
 /**
  *
@@ -17,7 +18,8 @@ public class Iniciar extends javax.swing.JPanel {
      */
     public Iniciar() {
         initComponents();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 5");  
+        continuar.putClientProperty( "FlatLaf.style", "arc: 5"); 
+        
     }
 
     /**
@@ -29,24 +31,29 @@ public class Iniciar extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        fondo = new javax.swing.JPanel();
         lbl1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         email = new javax.swing.JTextField();
         lblEmail = new javax.swing.JLabel();
         continuar = new javax.swing.JButton();
-        pass = new javax.swing.JTextField();
         lblPass = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
+        jPasswordField1 = new javax.swing.JPasswordField();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        setMinimumSize(new java.awt.Dimension(570, 584));
+        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        fondo.setBackground(new java.awt.Color(255, 255, 255));
+        fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
-        lbl1.setText("Iniciar sesión o Registrarse");
-        jPanel1.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
+        lbl1.setText("Iniciar sesión");
+        fondo.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        fondo.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
 
         email.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         email.setText("Intruduce Email");
@@ -62,12 +69,12 @@ public class Iniciar extends javax.swing.JPanel {
                 emailActionPerformed(evt);
             }
         });
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 538, -1));
+        fondo.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 530, -1));
 
         lblEmail.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(153, 153, 153));
         lblEmail.setText("Email");
-        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 37, -1));
+        fondo.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 37, -1));
 
         continuar.setBackground(new java.awt.Color(154, 154, 154));
         continuar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -78,28 +85,12 @@ public class Iniciar extends javax.swing.JPanel {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 144, 53));
-
-        pass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        pass.setText("Intruduce Contraseña");
-        pass.setToolTipText("Introduce tu correo electrónico");
-        pass.setPreferredSize(new java.awt.Dimension(536, 60));
-        pass.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                passMouseClicked(evt);
-            }
-        });
-        pass.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passActionPerformed(evt);
-            }
-        });
-        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 200, -1, -1));
+        fondo.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 144, 53));
 
         lblPass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass.setForeground(new java.awt.Color(153, 153, 153));
         lblPass.setText("Contraseña");
-        jPanel1.add(lblPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
+        fondo.add(lblPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 180, -1, -1));
 
         cerrar.setBackground(new java.awt.Color(255, 255, 255));
         cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,41 +110,38 @@ public class Iniciar extends javax.swing.JPanel {
         lblX.setText("X");
         cerrar.add(lblX, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 20, 30));
 
-        jPanel1.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
+        fondo.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-        );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 361, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
-        );
+        jPasswordField1.setText("jPasswordField1");
+        fondo.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 202, 530, 60));
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel2.setText("He olvidado mi contraseña");
+        jLabel2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel2MouseClicked(evt);
+            }
+        });
+        fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 170, -1));
+
+        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(135, 172, 209));
+        jLabel1.setText("Crear cuenta");
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 80, -1));
+
+        add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 361));
+
+        getAccessibleContext().setAccessibleName("panel");
     }// </editor-fold>//GEN-END:initComponents
-
-    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
-        email.setText("");
-    }//GEN-LAST:event_emailMouseClicked
-
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_continuarActionPerformed
-
-    private void passMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passMouseClicked
-        pass.setText("");
-    }//GEN-LAST:event_passMouseClicked
-
-    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_passActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
         System.exit(0);
@@ -167,17 +155,54 @@ public class Iniciar extends javax.swing.JPanel {
         lblX.setForeground(Color.black);
     }//GEN-LAST:event_cerrarMouseExited
 
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailActionPerformed
 
+    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
+        email.setText("");
+    }//GEN-LAST:event_emailMouseClicked
+
+    private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
+        RecuperarPass rp = new RecuperarPass();
+        mostrarPanel(rp);
+    }//GEN-LAST:event_jLabel2MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+        Registro reg = new Registro();
+        login l = new login();
+        reg.setSize(570, 584);
+        mostrarPanel(reg);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    public void mostrarPanel(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(500,400);
+        p.setLocation(0,0);   
+        
+        //quitamos la ventana anterior y mostramos la nueva
+        fondo.removeAll();
+        fondo.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        fondo.revalidate();
+        fondo.setSize(570, 584);
+        fondo.repaint();
+    }
+    
+    
+    
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
     private javax.swing.JTextField email;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel fondo;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblX;
-    private javax.swing.JTextField pass;
     // End of variables declaration//GEN-END:variables
 }
