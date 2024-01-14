@@ -4,6 +4,7 @@
  */
 package Vista;
 
+import Controlador.HibernateUtil;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import javax.swing.JPanel;
@@ -20,7 +21,7 @@ public class login extends javax.swing.JFrame {
      */
     public login() {
         initComponents();
-        //Iniciar inicio=new Iniciar();       
+        
         //mostrarPanel(inicio);
         FlatLightLaf.setup();
         //cargar.mostrar();
@@ -113,7 +114,7 @@ public class login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Registro reg = new Registro();
-        setSize(600, 600);
+        setSize(600, 800);
         mostrarPanel(reg);
         
     }//GEN-LAST:event_jButton2ActionPerformed

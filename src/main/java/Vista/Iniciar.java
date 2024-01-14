@@ -42,7 +42,6 @@ public class Iniciar extends javax.swing.JPanel {
         lblX = new javax.swing.JLabel();
         jPasswordField1 = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(570, 584));
         setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -124,16 +123,6 @@ public class Iniciar extends javax.swing.JPanel {
         });
         fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 170, -1));
 
-        jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(135, 172, 209));
-        jLabel1.setText("Crear cuenta");
-        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel1MouseClicked(evt);
-            }
-        });
-        fondo.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 310, 80, -1));
-
         add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 361));
 
         getAccessibleContext().setAccessibleName("panel");
@@ -168,13 +157,6 @@ public class Iniciar extends javax.swing.JPanel {
         mostrarPanel(rp);
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
-        Registro reg = new Registro();
-        login l = new login();
-        reg.setSize(570, 584);
-        mostrarPanel(reg);
-    }//GEN-LAST:event_jLabel1MouseClicked
-
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
         p.setSize(500,400);
@@ -196,7 +178,6 @@ public class Iniciar extends javax.swing.JPanel {
     private javax.swing.JButton continuar;
     private javax.swing.JTextField email;
     private javax.swing.JPanel fondo;
-    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;

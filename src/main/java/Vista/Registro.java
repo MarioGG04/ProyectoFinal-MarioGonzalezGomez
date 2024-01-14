@@ -4,6 +4,8 @@
  */
 package Vista;
 
+
+import Controlador.HibernateUtil;
 import java.awt.Color;
 
 /**
@@ -17,7 +19,9 @@ public class Registro extends javax.swing.JPanel {
      */
     public Registro() {
         initComponents();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 5");  
+        
+       // continuar.putClientProperty( "FlatLaf.style", "arc: 5"); 
+        continuar.setVisible(true);
     }
 
     /**
@@ -32,17 +36,19 @@ public class Registro extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         lbl1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        email = new javax.swing.JTextField();
+        apellidos = new javax.swing.JTextField();
         lblEmail = new javax.swing.JLabel();
         continuar = new javax.swing.JButton();
         lblPass = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
         lblEmail1 = new javax.swing.JLabel();
-        email1 = new javax.swing.JTextField();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        email = new javax.swing.JTextField();
+        pass = new javax.swing.JPasswordField();
         lblPass1 = new javax.swing.JLabel();
-        email2 = new javax.swing.JTextField();
+        nombre = new javax.swing.JTextField();
+        usuario = new javax.swing.JTextField();
+        lblPass2 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(570, 584));
         setPreferredSize(new java.awt.Dimension(570, 584));
@@ -58,21 +64,21 @@ public class Registro extends javax.swing.JPanel {
         jPanel1.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
 
-        email.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        email.setText("Intruduce tu apellido");
-        email.setToolTipText("Introduce tu correo electrónico");
-        email.setPreferredSize(new java.awt.Dimension(536, 60));
-        email.addMouseListener(new java.awt.event.MouseAdapter() {
+        apellidos.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        apellidos.setText("Intruduce tu apellido");
+        apellidos.setToolTipText("Introduce tu correo electrónico");
+        apellidos.setPreferredSize(new java.awt.Dimension(536, 60));
+        apellidos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                emailMouseClicked(evt);
+                apellidosMouseClicked(evt);
             }
         });
-        email.addActionListener(new java.awt.event.ActionListener() {
+        apellidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                emailActionPerformed(evt);
+                apellidosActionPerformed(evt);
             }
         });
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 530, -1));
+        jPanel1.add(apellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 530, -1));
 
         lblEmail.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(153, 153, 153));
@@ -88,7 +94,7 @@ public class Registro extends javax.swing.JPanel {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 144, 53));
+        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, 144, 53));
 
         lblPass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass.setForeground(new java.awt.Color(153, 153, 153));
@@ -118,47 +124,68 @@ public class Registro extends javax.swing.JPanel {
         lblEmail1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail1.setForeground(new java.awt.Color(153, 153, 153));
         lblEmail1.setText("Email");
-        jPanel1.add(lblEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 37, -1));
+        jPanel1.add(lblEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 37, -1));
 
-        email1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        email1.setText("Intruduce Email");
-        email1.setToolTipText("Introduce tu correo electrónico");
-        email1.setPreferredSize(new java.awt.Dimension(536, 60));
-        email1.addMouseListener(new java.awt.event.MouseAdapter() {
+        email.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        email.setText("Intruduce Email");
+        email.setToolTipText("Introduce tu correo electrónico");
+        email.setPreferredSize(new java.awt.Dimension(536, 60));
+        email.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                email1MouseClicked(evt);
+                emailMouseClicked(evt);
             }
         });
-        email1.addActionListener(new java.awt.event.ActionListener() {
+        email.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                email1ActionPerformed(evt);
+                emailActionPerformed(evt);
             }
         });
-        jPanel1.add(email1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 530, -1));
+        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 530, -1));
 
-        jPasswordField2.setText("jPasswordField1");
-        jPanel1.add(jPasswordField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 530, 60));
+        pass.setText("jPasswordField1");
+        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 330, 60));
 
         lblPass1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass1.setForeground(new java.awt.Color(153, 153, 153));
         lblPass1.setText("Contraseña");
-        jPanel1.add(lblPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, -1, -1));
+        jPanel1.add(lblPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
-        email2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        email2.setText("Intruduce tu nombre");
-        email2.setToolTipText("Introduce tu correo electrónico");
-        email2.setPreferredSize(new java.awt.Dimension(536, 60));
-        email2.addMouseListener(new java.awt.event.MouseAdapter() {
+        nombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        nombre.setText("Intruduce tu nombre");
+        nombre.setToolTipText("Introduce tu correo electrónico");
+        nombre.setPreferredSize(new java.awt.Dimension(536, 60));
+        nombre.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
-                email2MouseClicked(evt);
+                nombreMouseClicked(evt);
             }
         });
-        email2.addActionListener(new java.awt.event.ActionListener() {
+        nombre.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                email2ActionPerformed(evt);
+                nombreActionPerformed(evt);
             }
         });
-        jPanel1.add(email2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 530, -1));
+        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 530, -1));
+
+        usuario.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        usuario.setText("Introduce tu usuario");
+        usuario.setToolTipText("Introduce tu correo electrónico");
+        usuario.setPreferredSize(new java.awt.Dimension(536, 60));
+        usuario.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                usuarioMouseClicked(evt);
+            }
+        });
+        usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usuarioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 530, -1));
+
+        lblPass2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblPass2.setForeground(new java.awt.Color(153, 153, 153));
+        lblPass2.setText("Usuario");
+        jPanel1.add(lblPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 60, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -171,15 +198,14 @@ public class Registro extends javax.swing.JPanel {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 680, Short.MAX_VALUE)
         );
     }// </editor-fold>//GEN-END:initComponents
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-        // TODO add your handling code here:
+       HibernateUtil hu = new HibernateUtil();
+       
+        hu.registrarUsuario(nombre.getText(), apellidos.getText(), usuario.getText(), email.getText(), pass.getText());
     }//GEN-LAST:event_continuarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
@@ -194,45 +220,55 @@ public class Registro extends javax.swing.JPanel {
         lblX.setForeground(Color.black);
     }//GEN-LAST:event_cerrarMouseExited
 
+    private void apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apellidosActionPerformed
+
+    private void apellidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apellidosMouseClicked
+        apellidos.setText("");
+    }//GEN-LAST:event_apellidosMouseClicked
+
+    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailMouseClicked
+
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailActionPerformed
 
-    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
-        email.setText("");
-    }//GEN-LAST:event_emailMouseClicked
-
-    private void email1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_email1MouseClicked
+    private void nombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_email1MouseClicked
+    }//GEN-LAST:event_nombreMouseClicked
 
-    private void email1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_email1ActionPerformed
+    private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_email1ActionPerformed
+    }//GEN-LAST:event_nombreActionPerformed
 
-    private void email2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_email2MouseClicked
+    private void usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseClicked
         // TODO add your handling code here:
-    }//GEN-LAST:event_email2MouseClicked
+    }//GEN-LAST:event_usuarioMouseClicked
 
-    private void email2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_email2ActionPerformed
+    private void usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_email2ActionPerformed
+    }//GEN-LAST:event_usuarioActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField apellidos;
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
     private javax.swing.JTextField email;
-    private javax.swing.JTextField email1;
-    private javax.swing.JTextField email2;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblEmail1;
     private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblPass1;
+    private javax.swing.JLabel lblPass2;
     private javax.swing.JLabel lblX;
+    private javax.swing.JTextField nombre;
+    private javax.swing.JPasswordField pass;
+    private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }

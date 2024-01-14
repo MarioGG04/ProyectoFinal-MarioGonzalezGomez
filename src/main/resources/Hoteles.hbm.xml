@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Generated 13 ene 2024, 20:22:33 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+    <class catalog="hotel2" name="model.Hoteles" optimistic-lock="none" table="hoteles">
+        <id name="id" type="int">
+            <column name="id"/>
+            <generator class="assigned"/>
+        </id>
+        <property name="nombre" type="string">
+            <column length="20" name="nombre" not-null="true"/>
+        </property>
+        <property name="localidad" type="string">
+            <column length="20" name="localidad" not-null="true"/>
+        </property>
+        <property name="provincia" type="string">
+            <column length="30" name="provincia" not-null="true"/>
+        </property>
+        <property name="calificacion" type="int">
+            <column name="calificacion" not-null="true"/>
+        </property>
+        <set fetch="select" inverse="true" lazy="true" name="reservases" table="reservas">
+            <key>
+                <column name="hotel" not-null="true"/>
+            </key>
+            <one-to-many class="model.Reservas"/>
+        </set>
+    </class>
+</hibernate-mapping>
