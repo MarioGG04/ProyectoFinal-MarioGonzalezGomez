@@ -100,7 +100,7 @@ public class HibernateUtil {
             session.update(usuario);
 
             tx.commit();
-        }
+        } 
     } catch (Exception e) {
         e.printStackTrace();
     }

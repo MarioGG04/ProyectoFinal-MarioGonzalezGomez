@@ -4,8 +4,15 @@
  */
 package Vista;
 
+import Controlador.EmailUtil;
+import Controlador.HibernateUtil;
 import java.awt.Color;
+import java.util.Properties;
+import javax.mail.Authenticator;
+import javax.mail.PasswordAuthentication;
+import javax.mail.Session;
 import javax.swing.JPanel;
+import model.Email;
 
 /**
  *
@@ -18,7 +25,8 @@ public class RecuperarPass2 extends javax.swing.JPanel {
      */
     public RecuperarPass2() {
         initComponents();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 5");  
+        continuar.putClientProperty( "FlatLaf.style", "arc: 5");
+        lblEm.setVisible(false);
     }
 
     /**
@@ -33,11 +41,12 @@ public class RecuperarPass2 extends javax.swing.JPanel {
         jPanel1 = new javax.swing.JPanel();
         lbl1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
-        lblEmail = new javax.swing.JLabel();
+        lblPass = new javax.swing.JLabel();
         continuar = new javax.swing.JButton();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        pass = new javax.swing.JPasswordField();
+        lblEm = new javax.swing.JLabel();
 
         jPanel1.setBackground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -47,10 +56,10 @@ public class RecuperarPass2 extends javax.swing.JPanel {
         jPanel1.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
         jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
 
-        lblEmail.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        lblEmail.setForeground(new java.awt.Color(153, 153, 153));
-        lblEmail.setText("Nueva contraseña");
-        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 120, -1));
+        lblPass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblPass.setForeground(new java.awt.Color(153, 153, 153));
+        lblPass.setText("Nueva contraseña");
+        jPanel1.add(lblPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 120, 120, -1));
 
         continuar.setBackground(new java.awt.Color(154, 154, 154));
         continuar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -83,8 +92,11 @@ public class RecuperarPass2 extends javax.swing.JPanel {
 
         jPanel1.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
-        jPasswordField1.setText("jPasswordField1");
-        jPanel1.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 530, 60));
+        pass.setText("jPasswordField1");
+        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 530, 60));
+
+        lblEm.setText("jLabel1");
+        jPanel1.add(lblEm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -101,7 +113,40 @@ public class RecuperarPass2 extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-        // TODO add your handling code here:
+            
+            String emailText =lblEm.getText();
+            
+            
+            final String fromEmail="mariogongom4@gmail.com";
+            final String password="wactidfkxukqdseq";
+            final String toEmail=emailText;
+
+            System.out.println("SSLMail Start");
+            Properties props=new Properties();
+            props.put("mail.smtp.host", "smtp.gmail.com");
+            props.put("mail.smtp.starttls.enable", "true");
+            props.put("mail.smtp.port", "587");
+            props.put("mail.smtp.user", fromEmail);
+            props.put("mail.smtp.auth", "true");
+            props.put("mail.smtp.ssl.protocols","TLSv1.2");
+            
+            Authenticator auth = new Authenticator() {
+                protected PasswordAuthentication getPasswordAuthentication(){
+                    return new PasswordAuthentication(fromEmail, password);
+                }
+            };
+            
+            Session session = Session.getDefaultInstance(props, auth);
+            System.out.println("Session created");
+            EmailUtil.sendEmail(session, toEmail, "Cambio de contraseña", "Su contraseña ha sido cambiada. Si no la has cambiado tú, revisa tu cuenta.");
+            
+            Iniciar ini = new Iniciar();
+            
+            HibernateUtil hu = new HibernateUtil();
+            
+            hu.actualizarUsuario(toEmail, password);
+                        
+            mostrarPanel(ini);
     }//GEN-LAST:event_continuarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
@@ -131,10 +176,11 @@ public class RecuperarPass2 extends javax.swing.JPanel {
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;
-    private javax.swing.JLabel lblEmail;
+    public javax.swing.JLabel lblEm;
+    private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblX;
+    private javax.swing.JPasswordField pass;
     // End of variables declaration//GEN-END:variables
 }
