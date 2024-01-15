@@ -4,12 +4,13 @@
  */
 package org.Vista;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import javax.swing.JPanel;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class RecuperarPass extends javax.swing.JPanel {
 
@@ -18,7 +19,9 @@ public class RecuperarPass extends javax.swing.JPanel {
      */
     public RecuperarPass() {
         initComponents();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 5");  
+        FlatLightLaf.setup();
+        continuar.putClientProperty( "FlatLaf.style", "arc: 15");
+        email.putClientProperty("FlatLaf.style", "arc: 15"); 
     }
 
     /**

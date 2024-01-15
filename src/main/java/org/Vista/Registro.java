@@ -10,7 +10,7 @@ import java.awt.Color;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class Registro extends javax.swing.JPanel {
 
@@ -230,6 +230,7 @@ public class Registro extends javax.swing.JPanel {
 
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
         // TODO add your handling code here:
+        email.setText("");
     }//GEN-LAST:event_emailMouseClicked
 
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
@@ -238,6 +239,7 @@ public class Registro extends javax.swing.JPanel {
 
     private void nombreMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_nombreMouseClicked
         // TODO add your handling code here:
+        nombre.setText("");
     }//GEN-LAST:event_nombreMouseClicked
 
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
@@ -246,6 +248,7 @@ public class Registro extends javax.swing.JPanel {
 
     private void usuarioMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_usuarioMouseClicked
         // TODO add your handling code here:
+        email.setText("");
     }//GEN-LAST:event_usuarioMouseClicked
 
     private void usuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usuarioActionPerformed

@@ -4,12 +4,13 @@
  */
 package org.Vista;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import javax.swing.JPanel;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class Iniciar extends javax.swing.JPanel {
 
@@ -18,7 +19,10 @@ public class Iniciar extends javax.swing.JPanel {
      */
     public Iniciar() {
         initComponents();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 5"); 
+        FlatLightLaf.setup();
+        continuar.putClientProperty( "FlatLaf.style", "arc: 15");
+        email.putClientProperty("FlatLaf.style", "arc: 15");
+        pass.putClientProperty("FlatLaf.style", "arc: 15");
         
     }
 
@@ -40,7 +44,7 @@ public class Iniciar extends javax.swing.JPanel {
         lblPass = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        pass = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(566, 343));
@@ -112,8 +116,8 @@ public class Iniciar extends javax.swing.JPanel {
 
         fondo.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
-        jPasswordField1.setText("jPasswordField1");
-        fondo.add(jPasswordField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 202, 530, 60));
+        pass.setText("jPasswordField1");
+        fondo.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 202, 530, 60));
 
         jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
         jLabel2.setText("He olvidado mi contraseña");
@@ -180,11 +184,11 @@ public class Iniciar extends javax.swing.JPanel {
     private javax.swing.JTextField email;
     private javax.swing.JPanel fondo;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JPasswordField jPasswordField1;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblX;
+    private javax.swing.JPasswordField pass;
     // End of variables declaration//GEN-END:variables
 }

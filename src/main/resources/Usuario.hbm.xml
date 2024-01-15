@@ -7,19 +7,19 @@
             <generator class="assigned"/>
         </id>
         <property name="nombre" type="string">
-            <column length="20" name="nombre" not-null="true"/>
+            <column length="200" name="nombre" not-null="true"/>
         </property>
         <property name="apellido" type="string">
-            <column length="20" name="apellido" not-null="true"/>
+            <column length="200" name="apellido" not-null="true"/>
         </property>
         <property name="username" type="string">
-            <column length="20" name="username" not-null="true"/>
+            <column length="200" name="username" not-null="true"/>
         </property>
         <property name="password" type="string">
             <column length="500" name="password" not-null="true"/>
         </property>
         <property name="email" type="string">
-            <column length="20" name="email" not-null="true"/>
+            <column length="200" name="email" not-null="true"/>
         </property>
         <set fetch="select" inverse="true" lazy="true" name="reservases" table="reservas">
             <key>

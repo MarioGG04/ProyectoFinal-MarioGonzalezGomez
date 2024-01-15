@@ -4,6 +4,7 @@
  */
 package org.Vista;
 
+import com.formdev.flatlaf.FlatLightLaf;
 import org.Controlador.EmailUtil;
 import org.Controlador.HibernateUtil;
 import java.awt.Color;
@@ -16,7 +17,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class RecuperarPass2 extends javax.swing.JPanel {
 
@@ -25,7 +26,9 @@ public class RecuperarPass2 extends javax.swing.JPanel {
      */
     public RecuperarPass2() {
         initComponents();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 5");
+        FlatLightLaf.setup();
+        continuar.putClientProperty( "FlatLaf.style", "arc: 15");
+        pass.putClientProperty("FlatLaf.style", "arc: 15");
         lblEm.setVisible(false);
     }
 
@@ -95,9 +98,17 @@ public class RecuperarPass2 extends javax.swing.JPanel {
         jPanel1.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
         pass.setText("jPasswordField1");
+        pass.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                passMouseClicked(evt);
+            }
+        });
+        pass.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                passActionPerformed(evt);
+            }
+        });
         jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 140, 530, 60));
-
-        lblEm.setText("jLabel1");
         jPanel1.add(lblEm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
@@ -162,6 +173,15 @@ public class RecuperarPass2 extends javax.swing.JPanel {
     private void cerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseExited
         lblX.setForeground(Color.black);
     }//GEN-LAST:event_cerrarMouseExited
+
+    private void passActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passActionPerformed
+        
+    }//GEN-LAST:event_passActionPerformed
+
+    private void passMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_passMouseClicked
+        // TODO add your handling code here:
+        pass.setText("");
+    }//GEN-LAST:event_passMouseClicked
 
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel

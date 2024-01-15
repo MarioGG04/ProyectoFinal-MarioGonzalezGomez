@@ -25,7 +25,8 @@ public class login extends javax.swing.JFrame {
         //mostrarPanel(inicio);
         
         //cargar.mostrar();
-        //continuar.putClientProperty( "FlatLaf.style", "arc: 5");   
+        iniciar.putClientProperty( "FlatLaf.style", "arc: 15");  
+        registrar.putClientProperty( "FlatLaf.style", "arc: 15");  
     }
 
     /**
@@ -38,8 +39,8 @@ public class login extends javax.swing.JFrame {
     private void initComponents() {
 
         panelMov = new javax.swing.JPanel();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        iniciar = new javax.swing.JButton();
+        registrar = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
         lbl1 = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
@@ -49,21 +50,28 @@ public class login extends javax.swing.JFrame {
         setLocation(new java.awt.Point(0, 0));
         setLocationByPlatform(true);
         setMinimumSize(new java.awt.Dimension(570, 360));
+        setUndecorated(true);
 
         panelMov.setBackground(new java.awt.Color(255, 255, 255));
         panelMov.setPreferredSize(new java.awt.Dimension(570, 584));
 
-        jButton1.setText("Iniciar");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
+        iniciar.setBackground(new java.awt.Color(154, 154, 154));
+        iniciar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        iniciar.setForeground(new java.awt.Color(255, 255, 255));
+        iniciar.setText("Iniciar");
+        iniciar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
+                iniciarActionPerformed(evt);
             }
         });
 
-        jButton2.setText("Registrar");
-        jButton2.addActionListener(new java.awt.event.ActionListener() {
+        registrar.setBackground(new java.awt.Color(154, 154, 154));
+        registrar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        registrar.setForeground(new java.awt.Color(255, 255, 255));
+        registrar.setText("Registrar");
+        registrar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton2ActionPerformed(evt);
+                registrarActionPerformed(evt);
             }
         });
 
@@ -93,18 +101,21 @@ public class login extends javax.swing.JFrame {
         panelMovLayout.setHorizontalGroup(
             panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelMovLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(lbl1)
-                .addGap(293, 293, 293)
-                .addComponent(cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelMovLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(panelMovLayout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(jButton1)
-                .addGap(38, 38, 38)
-                .addComponent(jButton2))
+                .addGroup(panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(panelMovLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(lbl1)
+                        .addGap(293, 293, 293)
+                        .addComponent(cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelMovLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(panelMovLayout.createSequentialGroup()
+                        .addGap(90, 90, 90)
+                        .addComponent(iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(42, 42, 42)
+                        .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         panelMovLayout.setVerticalGroup(
             panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -115,38 +126,40 @@ public class login extends javax.swing.JFrame {
                     .addComponent(cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(10, 10, 10)
                 .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(100, 100, 100)
-                .addGroup(panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton1)
-                    .addComponent(jButton2)))
+                .addGap(117, 117, 117)
+                .addGroup(panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(154, 154, 154))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 575, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 389, Short.MAX_VALUE)
         );
 
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+    private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
        Iniciar iniciar = new Iniciar();
        mostrarPanel(iniciar);
-    }//GEN-LAST:event_jButton1ActionPerformed
+    }//GEN-LAST:event_iniciarActionPerformed
 
-    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+    private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
         Registro reg = new Registro();
-        setSize(570, 700);
+        setSize(600, 700);
+        setLocation(500, 50);
         mostrarPanel2(reg);
         
-    }//GEN-LAST:event_jButton2ActionPerformed
+    }//GEN-LAST:event_registrarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
         System.exit(0);
@@ -222,11 +235,11 @@ public class login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cerrar;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
+    private javax.swing.JButton iniciar;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblX;
     private javax.swing.JPanel panelMov;
+    private javax.swing.JButton registrar;
     // End of variables declaration//GEN-END:variables
 }
