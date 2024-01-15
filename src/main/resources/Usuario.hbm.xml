@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 13 ene 2024, 20:22:33 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 ene 2024 17:03:44 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class catalog="hotel2" name="model.Usuario" optimistic-lock="none" table="usuario">
+    <class catalog="hotel2" name="org.model.Usuario" optimistic-lock="none" table="usuario">
         <id name="id" type="int">
             <column name="id"/>
             <generator class="assigned"/>
@@ -16,7 +16,7 @@
             <column length="20" name="username" not-null="true"/>
         </property>
         <property name="password" type="string">
-            <column length="200" name="password" not-null="true"/>
+            <column length="500" name="password" not-null="true"/>
         </property>
         <property name="email" type="string">
             <column length="20" name="email" not-null="true"/>
@@ -25,7 +25,7 @@
             <key>
                 <column name="usuario" not-null="true"/>
             </key>
-            <one-to-many class="model.Reservas"/>
+            <one-to-many class="org.model.Reservas"/>
         </set>
     </class>
 </hibernate-mapping>

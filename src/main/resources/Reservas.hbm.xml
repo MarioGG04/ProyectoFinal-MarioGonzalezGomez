@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 13 ene 2024, 20:22:33 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 ene 2024 17:03:44 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
     <class catalog="hotel2" name="model.Reservas" optimistic-lock="none" table="reservas">
-        <composite-id class="model.ReservasId" name="id">
+        <composite-id class="org.model.ReservasId" name="id">
             <key-property name="habitacion" type="int">
                 <column name="habitacion"/>
             </key-property>
@@ -13,13 +13,13 @@
                 <column name="usuario"/>
             </key-property>
         </composite-id>
-        <many-to-one class="model.Hoteles" fetch="select" insert="false" name="hoteles" update="false">
+        <many-to-one class="org.model.Hoteles" fetch="select" insert="false" name="hoteles" update="false">
             <column name="hotel" not-null="true"/>
         </many-to-one>
-        <many-to-one class="model.Usuario" fetch="select" insert="false" name="usuario" update="false">
+        <many-to-one class="org.model.Usuario" fetch="select" insert="false" name="usuario" update="false">
             <column name="usuario" not-null="true"/>
         </many-to-one>
-        <many-to-one class="model.Habitaciones" fetch="select" insert="false" name="habitaciones" update="false">
+        <many-to-one class="org.model.Habitaciones" fetch="select" insert="false" name="habitaciones" update="false">
             <column name="habitacion" not-null="true"/>
         </many-to-one>
         <property name="fechaEntrada" type="date">

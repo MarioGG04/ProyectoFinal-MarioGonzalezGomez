@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<!-- Generated 13 ene 2024, 20:22:33 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 15 ene 2024 17:03:44 by Hibernate Tools 6.3.1.Final --><!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
 <hibernate-mapping>
-    <class catalog="hotel2" name="model.Habitaciones" optimistic-lock="none" table="habitaciones">
+    <class catalog="hotel3" name="model.Habitaciones" optimistic-lock="none" table="habitaciones">
         <id name="numero" type="int">
             <column name="numero"/>
             <generator class="assigned"/>
         </id>
-        <property name="baños" type="int">
-            <column name="baños" not-null="true"/>
+        <property name="banhos" type="int">
+            <column name="banhos" not-null="true"/>
         </property>
         <property name="camas" type="int">
             <column name="camas" not-null="true"/>

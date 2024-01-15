@@ -2,19 +2,24 @@
 <!DOCTYPE hibernate-configuration PUBLIC "-//Hibernate/Hibernate Configuration DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
 <hibernate-configuration>
     <session-factory>
-        <property name="hibernate.connection.driver_class">com.mysql.jdbc.Driver</property>
-        <property name="hibernate.connection.url">jdbc:mysql://localhost/hotel2</property>
-        <property name="hibernate.connection.username">root</property>
-        <property name="hibernate.connection.password">123456</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <property name="hibernate.hbm2ddl.auto">none</property>
-        <property name="hibernate.search.autoregister_listeners">true</property>
-        <property name="hibernate.validator.apply_to_ddl">false</property>
-        <property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
-        <mapping resource="model/Usuario.hbm.xml"/>
-        <mapping resource="model/Habitaciones.hbm.xml"/>
-        <mapping resource="model/Hoteles.hbm.xml"/>
-        <mapping resource="model/Reservas.hbm.xml"/>
-        <mapping class="model.Usuario" />
+<property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+<property name="hibernate.connection.url">jdbc:mysql://localhost/hotel3</property>
+<property name="hibernate.connection.username">root</property>
+<property name="hibernate.dialect">org.hibernate.dialect.MySQLDialect</property>
+<property name="hibernate.hbm2ddl.auto">none</property>
+<property name="hibernate.search.autoregister_listeners">true</property>
+<property name="hibernate.validator.apply_to_ddl">false</property>
+<property name="hibernate.current_session_context_class">thread</property>
+<property name="show_sql">true</property>
+<property name="format_sql">false</property>
+        <mapping class="org.model.Usuario" />
+        <mapping class="org.model.Hoteles" />
+        <mapping class="org.model.Habitaciones"/>
+        <mapping class="org.model.Reservas"/>
+        <!--
+        <mapping resource="Usuario.hbm.xml"/>
+        <mapping resource="Habitaciones.hbm.xml"/>
+        <mapping resource="Hoteles.hbm.xml"/>
+        <mapping resource="Reservas.hbm.xml"/>-->
     </session-factory>
 </hibernate-configuration>

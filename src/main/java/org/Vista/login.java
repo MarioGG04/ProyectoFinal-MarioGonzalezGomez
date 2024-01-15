@@ -2,9 +2,9 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
-package Vista;
+package org.Vista;
 
-import Controlador.HibernateUtil;
+import org.Controlador.HibernateUtil;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import javax.swing.JPanel;
@@ -23,7 +23,7 @@ public class login extends javax.swing.JFrame {
         initComponents();
         
         //mostrarPanel(inicio);
-        FlatLightLaf.setup();
+        
         //cargar.mostrar();
         //continuar.putClientProperty( "FlatLaf.style", "arc: 5");   
     }
@@ -47,9 +47,11 @@ public class login extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
-        setUndecorated(true);
+        setLocationByPlatform(true);
+        setMinimumSize(new java.awt.Dimension(570, 360));
 
         panelMov.setBackground(new java.awt.Color(255, 255, 255));
+        panelMov.setPreferredSize(new java.awt.Dimension(570, 584));
 
         jButton1.setText("Iniciar");
         jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +129,7 @@ public class login extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(panelMov, javax.swing.GroupLayout.DEFAULT_SIZE, 360, Short.MAX_VALUE)
         );
 
         pack();
@@ -141,8 +143,8 @@ public class login extends javax.swing.JFrame {
 
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         Registro reg = new Registro();
-        setSize(600, 800);
-        mostrarPanel(reg);
+        setSize(570, 700);
+        mostrarPanel2(reg);
         
     }//GEN-LAST:event_jButton2ActionPerformed
 
@@ -185,7 +187,7 @@ public class login extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
-
+            FlatLightLaf.setup();
         
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
@@ -197,7 +199,7 @@ public class login extends javax.swing.JFrame {
     }
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
-        p.setSize(500,400);
+        p.setSize(570, 361);
         p.setLocation(0,0);   
 
         //quitamos la ventana anterior y mostramos la nueva
