@@ -7,6 +7,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
+import java.util.List;
 import org.mindrot.jbcrypt.BCrypt;
 
 public class HibernateUtil {
@@ -53,9 +54,9 @@ public static SessionFactory buildSessionFactory() {
         }
     }
     
-    public static boolean comprobarPass(String pass, String user){
+    public static boolean comprobarPass(String email, String pass){
         
-        Usuario usr = obtenerUsuario(user);
+        Usuario usr = obtenerUsuario(email);
         
         String hashPass = usr.getPassword();
         
@@ -100,17 +101,21 @@ public static SessionFactory buildSessionFactory() {
 }
 
     
-    public static Usuario obtenerUsuario(String nombreUsuario) {
-        SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
-        Session session = sessionFactory.openSession();
+    public static Usuario obtenerUsuario(String email) {
+        Session sesion = sessionFactory.openSession();
     try  {
-        // Utilizando HQL
-        String hql = "FROM Usuario WHERE username = :nombreUsuario";
-        var query = session.createQuery(hql, Usuario.class);
-        query.setParameter("nombreUsuario", nombreUsuario);
-        Usuario usuario = query.uniqueResult();
+                Query q = sesion.createQuery("FROM Usuario WHERE email = :email");
+		q.setParameter("email", email);
+		List<Usuario> usr = q.getResultList();
+		
+		Usuario usr2 = null;
+		
+		for (Usuario u: usr) {
+			usr2 = u;
+		}
 
-        return usuario;
+		return usr2;    
+
     } catch (Exception e) {
         e.printStackTrace();
         return null;

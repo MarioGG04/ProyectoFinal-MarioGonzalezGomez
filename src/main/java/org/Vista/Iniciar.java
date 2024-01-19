@@ -7,6 +7,7 @@ package org.Vista;
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import javax.swing.JPanel;
+import org.Controlador.HibernateUtil;
 
 /**
  *
@@ -134,7 +135,13 @@ public class Iniciar extends javax.swing.JPanel {
     }// </editor-fold>//GEN-END:initComponents
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-        // TODO add your handling code here:
+        HibernateUtil hu = new HibernateUtil();
+        PagPrincipal pri = new PagPrincipal();
+        if(hu.comprobarPass(email.getText(), pass.getText())){
+            pri.setVisible(true);
+            setVisible(false);
+        }
+        
     }//GEN-LAST:event_continuarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
