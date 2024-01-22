@@ -47,12 +47,15 @@ public class Iniciar extends javax.swing.JPanel {
         lblX = new javax.swing.JLabel();
         pass = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
+        jSeparator2 = new javax.swing.JSeparator();
+        jLabel3 = new javax.swing.JLabel();
 
+        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setMinimumSize(new java.awt.Dimension(566, 343));
         setPreferredSize(new java.awt.Dimension(566, 343));
-        setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         fondo.setBackground(new java.awt.Color(255, 255, 255));
+        fondo.setPreferredSize(new java.awt.Dimension(570, 584));
         fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -128,8 +131,27 @@ public class Iniciar extends javax.swing.JPanel {
             }
         });
         fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 170, -1));
+        fondo.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 373, 450, 10));
 
-        add(fondo, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 570, 361));
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel3.setText("Crear cuenta");
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        fondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, 80, -1));
+
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
+        this.setLayout(layout);
+        layout.setHorizontalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        layout.setVerticalGroup(
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
 
         getAccessibleContext().setAccessibleName("panel");
     }// </editor-fold>//GEN-END:initComponents
@@ -169,6 +191,14 @@ public class Iniciar extends javax.swing.JPanel {
         mostrarPanel(rp);
     }//GEN-LAST:event_jLabel2MouseClicked
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+        Registro reg = new Registro();
+        this.setSize(600, 700);
+       //setLocation(500, 50);
+        login l = new login();
+        l.mostrarPanel2(fondo);
+    }//GEN-LAST:event_jLabel3MouseClicked
+
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
         p.setSize(570, 361);
@@ -181,7 +211,17 @@ public class Iniciar extends javax.swing.JPanel {
         fondo.setSize(570, 584);
         fondo.repaint();
     }
-    
+    public void mostrarPanel2(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(570, 584);
+        p.setLocation(0,0);   
+
+        //quitamos la ventana anterior y mostramos la nueva
+        removeAll();
+        add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        revalidate();
+        repaint();
+    }
     
     
     
@@ -191,7 +231,9 @@ public class Iniciar extends javax.swing.JPanel {
     private javax.swing.JTextField email;
     private javax.swing.JPanel fondo;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblEmail;
     private javax.swing.JLabel lblPass;

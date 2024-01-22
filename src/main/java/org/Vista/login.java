@@ -150,6 +150,8 @@ public class login extends javax.swing.JFrame {
 
     private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
        Iniciar iniciar = new Iniciar();
+       setSize(500, 500);
+       setLocation(500, 25);
        mostrarPanel(iniciar);
     }//GEN-LAST:event_iniciarActionPerformed
 
@@ -212,7 +214,7 @@ public class login extends javax.swing.JFrame {
     }
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
-        p.setSize(570, 361);
+        p.setSize(570, 584);
         p.setLocation(0,0);   
 
         //quitamos la ventana anterior y mostramos la nueva
