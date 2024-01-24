@@ -1,27 +1,24 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package org.Vista;
 
-
-import org.Controlador.HibernateUtil;
 import java.awt.Color;
+import javax.swing.JPanel;
+import org.Controlador.HibernateUtil;
 
 /**
  *
- * @author Mario González Gómez
+ * @author Alumno
  */
-public class Registro extends javax.swing.JPanel {
+public class Crear extends javax.swing.JFrame {
 
     /**
-     * Creates new form Iniciar
+     * Creates new form Crear
      */
-    public Registro() {
+    public Crear() {
         initComponents();
-        
-       // continuar.putClientProperty( "FlatLaf.style", "arc: 5"); 
-        continuar.setVisible(true);
     }
 
     /**
@@ -33,7 +30,7 @@ public class Registro extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
         lbl1 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         apellidos = new javax.swing.JTextField();
@@ -42,6 +39,7 @@ public class Registro extends javax.swing.JPanel {
         lblPass = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
+        btnCrear = new javax.swing.JButton();
         lblEmail1 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         pass = new javax.swing.JPasswordField();
@@ -50,19 +48,19 @@ public class Registro extends javax.swing.JPanel {
         usuario = new javax.swing.JTextField();
         lblPass2 = new javax.swing.JLabel();
 
-        setMinimumSize(new java.awt.Dimension(570, 584));
-        setPreferredSize(new java.awt.Dimension(570, 584));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setUndecorated(true);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setAutoscrolls(true);
-        jPanel1.setMinimumSize(new java.awt.Dimension(570, 584));
-        jPanel1.setPreferredSize(new java.awt.Dimension(570, 584));
-        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setAutoscrolls(true);
+        jPanel2.setMinimumSize(new java.awt.Dimension(570, 584));
+        jPanel2.setPreferredSize(new java.awt.Dimension(570, 584));
+        jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lbl1.setText("Registrarse");
-        jPanel1.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
-        jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
+        jPanel2.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
+        jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
 
         apellidos.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         apellidos.setText("Intruduce tu apellido");
@@ -78,12 +76,12 @@ public class Registro extends javax.swing.JPanel {
                 apellidosActionPerformed(evt);
             }
         });
-        jPanel1.add(apellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 530, -1));
+        jPanel2.add(apellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 210, 530, -1));
 
         lblEmail.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail.setForeground(new java.awt.Color(153, 153, 153));
         lblEmail.setText("Nombre");
-        jPanel1.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 50, -1));
+        jPanel2.add(lblEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 50, -1));
 
         continuar.setBackground(new java.awt.Color(154, 154, 154));
         continuar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -94,12 +92,12 @@ public class Registro extends javax.swing.JPanel {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel1.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 510, 144, 53));
+        jPanel2.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 144, 53));
 
         lblPass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass.setForeground(new java.awt.Color(153, 153, 153));
         lblPass.setText("Apellidos");
-        jPanel1.add(lblPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 60, -1));
+        jPanel2.add(lblPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 190, 60, -1));
 
         cerrar.setBackground(new java.awt.Color(255, 255, 255));
         cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,12 +117,23 @@ public class Registro extends javax.swing.JPanel {
         lblX.setText("X");
         cerrar.add(lblX, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 20, 30));
 
-        jPanel1.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
+        jPanel2.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
+
+        btnCrear.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnCrear.setForeground(new java.awt.Color(153, 153, 153));
+        btnCrear.setText("Iniciar sesión");
+        btnCrear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
+            }
+        });
+        jPanel2.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 600, 140, 50));
 
         lblEmail1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail1.setForeground(new java.awt.Color(153, 153, 153));
         lblEmail1.setText("Email");
-        jPanel1.add(lblEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 37, -1));
+        jPanel2.add(lblEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 37, -1));
 
         email.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         email.setText("Intruduce Email");
@@ -140,15 +149,15 @@ public class Registro extends javax.swing.JPanel {
                 emailActionPerformed(evt);
             }
         });
-        jPanel1.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 530, -1));
+        jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 530, -1));
 
         pass.setText("jPasswordField1");
-        jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 330, 60));
+        jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 530, 60));
 
         lblPass1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass1.setForeground(new java.awt.Color(153, 153, 153));
         lblPass1.setText("Contraseña");
-        jPanel1.add(lblPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
+        jPanel2.add(lblPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
         nombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         nombre.setText("Intruduce tu nombre");
@@ -164,7 +173,7 @@ public class Registro extends javax.swing.JPanel {
                 nombreActionPerformed(evt);
             }
         });
-        jPanel1.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 530, -1));
+        jPanel2.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 530, -1));
 
         usuario.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         usuario.setText("Introduce tu usuario");
@@ -180,31 +189,39 @@ public class Registro extends javax.swing.JPanel {
                 usuarioActionPerformed(evt);
             }
         });
-        jPanel1.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 530, -1));
+        jPanel2.add(usuario, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 310, 530, -1));
 
         lblPass2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass2.setForeground(new java.awt.Color(153, 153, 153));
         lblPass2.setText("Usuario");
-        jPanel1.add(lblPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 60, -1));
+        jPanel2.add(lblPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 60, -1));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
         );
+
+        pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    private void apellidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apellidosMouseClicked
+        apellidos.setText("");
+    }//GEN-LAST:event_apellidosMouseClicked
+
+    private void apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_apellidosActionPerformed
+
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
-       HibernateUtil hu = new HibernateUtil();
-       
+        HibernateUtil hu = new HibernateUtil();
+
         hu.registrarUsuario(nombre.getText(), apellidos.getText(), usuario.getText(), email.getText(), pass.getText());
     }//GEN-LAST:event_continuarActionPerformed
 
@@ -219,14 +236,6 @@ public class Registro extends javax.swing.JPanel {
     private void cerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseExited
         lblX.setForeground(Color.black);
     }//GEN-LAST:event_cerrarMouseExited
-
-    private void apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidosActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_apellidosActionPerformed
-
-    private void apellidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apellidosMouseClicked
-        apellidos.setText("");
-    }//GEN-LAST:event_apellidosMouseClicked
 
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
         // TODO add your handling code here:
@@ -255,13 +264,64 @@ public class Registro extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioActionPerformed
 
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        IniciarS iniciar = new IniciarS();
+        iniciar.setVisible(true);
+        setVisible(false);
+    }//GEN-LAST:event_btnCrearActionPerformed
+    public void mostrarPanel(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(570, 584);
+        p.setLocation(0,0);   
+
+        //quitamos la ventana anterior y mostramos la nueva
+        jPanel2.removeAll();
+        jPanel2.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        jPanel2.revalidate();
+        jPanel2.repaint();
+    }
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(Crear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(Crear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(Crear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(Crear.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new Crear().setVisible(true);
+            }
+        });
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidos;
+    private javax.swing.JButton btnCrear;
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
     private javax.swing.JTextField email;
-    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;
     private javax.swing.JLabel lblEmail;

@@ -149,17 +149,15 @@ public class login extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void iniciarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_iniciarActionPerformed
-       Iniciar iniciar = new Iniciar();
-       setSize(500, 500);
-       setLocation(500, 25);
-       mostrarPanel(iniciar);
+        IniciarS iniciar = new IniciarS();
+        iniciar.setVisible(true);
+        setVisible(false);
     }//GEN-LAST:event_iniciarActionPerformed
 
     private void registrarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_registrarActionPerformed
-        Registro reg = new Registro();
-        setSize(600, 700);
-        setLocation(500, 50);
-        mostrarPanel2(reg);
+        Crear crear = new Crear();
+        crear.setVisible(true);
+        setVisible(false);
         
     }//GEN-LAST:event_registrarActionPerformed
 

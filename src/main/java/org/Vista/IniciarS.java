@@ -1,30 +1,24 @@
 /*
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
+ * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package org.Vista;
 
-import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
 import javax.swing.JPanel;
 import org.Controlador.HibernateUtil;
 
 /**
  *
- * @author Mario González Gómez
+ * @author Alumno
  */
-public class Iniciar extends javax.swing.JPanel {
+public class IniciarS extends javax.swing.JFrame {
 
     /**
-     * Creates new form Iniciar
+     * Creates new form IniciarS
      */
-    public Iniciar() {
+    public IniciarS() {
         initComponents();
-        FlatLightLaf.setup();
-        continuar.putClientProperty( "FlatLaf.style", "arc: 15");
-        email.putClientProperty("FlatLaf.style", "arc: 15");
-        pass.putClientProperty("FlatLaf.style", "arc: 15");
-        
     }
 
     /**
@@ -48,14 +42,16 @@ public class Iniciar extends javax.swing.JPanel {
         pass = new javax.swing.JPasswordField();
         jLabel2 = new javax.swing.JLabel();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel3 = new javax.swing.JLabel();
+        btnCrear = new javax.swing.JButton();
 
-        setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
-        setMinimumSize(new java.awt.Dimension(566, 343));
-        setPreferredSize(new java.awt.Dimension(566, 343));
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setMinimumSize(new java.awt.Dimension(570, 500));
+        setUndecorated(true);
+        setPreferredSize(new java.awt.Dimension(570, 500));
 
         fondo.setBackground(new java.awt.Color(255, 255, 255));
-        fondo.setPreferredSize(new java.awt.Dimension(570, 584));
+        fondo.setMinimumSize(new java.awt.Dimension(570, 500));
+        fondo.setPreferredSize(new java.awt.Dimension(570, 500));
         fondo.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         lbl1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -130,31 +126,42 @@ public class Iniciar extends javax.swing.JPanel {
                 jLabel2MouseClicked(evt);
             }
         });
-        fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 310, 170, -1));
-        fondo.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 373, 450, 10));
+        fondo.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(340, 290, 170, 50));
+        fondo.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 373, 530, 10));
 
-        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
-        jLabel3.setText("Crear cuenta");
-        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel3MouseClicked(evt);
+        btnCrear.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnCrear.setForeground(new java.awt.Color(153, 153, 153));
+        btnCrear.setText("Crear cuenta");
+        btnCrear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
+        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCrearActionPerformed(evt);
             }
         });
-        fondo.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 420, 80, -1));
+        fondo.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 410, 140, 50));
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
+        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
+        getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 587, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(fondo, javax.swing.GroupLayout.PREFERRED_SIZE, 505, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
 
-        getAccessibleContext().setAccessibleName("panel");
+        pack();
+        setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
+        email.setText("");
+    }//GEN-LAST:event_emailMouseClicked
+
+    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_emailActionPerformed
 
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
         HibernateUtil hu = new HibernateUtil();
@@ -163,7 +170,7 @@ public class Iniciar extends javax.swing.JPanel {
             pri.setVisible(true);
             setVisible(false);
         }
-        
+
     }//GEN-LAST:event_continuarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
@@ -178,60 +185,73 @@ public class Iniciar extends javax.swing.JPanel {
         lblX.setForeground(Color.black);
     }//GEN-LAST:event_cerrarMouseExited
 
-    private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_emailActionPerformed
-
-    private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
-        email.setText("");
-    }//GEN-LAST:event_emailMouseClicked
-
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         RecuperarPass rp = new RecuperarPass();
+        
         mostrarPanel(rp);
     }//GEN-LAST:event_jLabel2MouseClicked
 
-    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
-        Registro reg = new Registro();
-        this.setSize(600, 700);
-       //setLocation(500, 50);
-        login l = new login();
-        l.mostrarPanel2(fondo);
-    }//GEN-LAST:event_jLabel3MouseClicked
+    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+        Crear crear = new Crear();
+        crear.setVisible(true);
+        setVisible(false);
 
+    }//GEN-LAST:event_btnCrearActionPerformed
+    
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
-        p.setSize(570, 361);
+        p.setSize(566, 361);
         p.setLocation(0,0);   
-        
+
         //quitamos la ventana anterior y mostramos la nueva
         fondo.removeAll();
         fondo.add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
         fondo.revalidate();
-        fondo.setSize(570, 584);
         fondo.repaint();
     }
-    public void mostrarPanel2(JPanel p){
-        //definimos tamaño y posición del panel
-        p.setSize(570, 584);
-        p.setLocation(0,0);   
+    
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(IniciarS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(IniciarS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(IniciarS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(IniciarS.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
 
-        //quitamos la ventana anterior y mostramos la nueva
-        removeAll();
-        add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
-        revalidate();
-        repaint();
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new IniciarS().setVisible(true);
+            }
+        });
     }
-    
-    
-    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnCrear;
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
     private javax.swing.JTextField email;
     private javax.swing.JPanel fondo;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JLabel lbl1;
