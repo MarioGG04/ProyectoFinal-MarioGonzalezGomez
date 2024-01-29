@@ -39,11 +39,11 @@ public class PagPrincipal extends javax.swing.JFrame {
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
+        jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
         sHt = new javax.swing.JSeparator();
         sCr = new javax.swing.JSeparator();
         sAp = new javax.swing.JSeparator();
@@ -76,6 +76,15 @@ public class PagPrincipal extends javax.swing.JFrame {
 
         jPanel2.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1030, -1));
 
+        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jLabel7.setText("Apartamentos");
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 100, -1));
+
         jLabel4.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel4.setText("Hoteles");
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -97,21 +106,12 @@ public class PagPrincipal extends javax.swing.JFrame {
                 jLabel5MouseClicked(evt);
             }
         });
-        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 90, -1));
+        jPanel2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 30, 100, -1));
 
         jLabel6.setFont(new java.awt.Font("Century Gothic", 1, 36)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(204, 204, 204));
         jLabel6.setText("·");
         jPanel2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 15, 20, 50));
-
-        jLabel7.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        jLabel7.setText("Apartamentos");
-        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                jLabel7MouseClicked(evt);
-            }
-        });
-        jPanel2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 30, 100, -1));
 
         sHt.setForeground(new java.awt.Color(0, 0, 0));
         jPanel2.add(sHt, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 50, 30, 20));
@@ -138,10 +138,10 @@ public class PagPrincipal extends javax.swing.JFrame {
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 40, Short.MAX_VALUE)
+            .addGap(0, 50, Short.MAX_VALUE)
         );
 
-        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 40));
+        getContentPane().add(jPanel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1040, 50));
 
         pack();
         setLocationRelativeTo(null);
@@ -164,7 +164,11 @@ public class PagPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_jLabel5MouseClicked
 
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
-        // TODO add your handling code here:
+        Apartamentos ap = new Apartamentos();
+        mostrarPanel(ap);
+        sHt.setVisible(false);
+        sAp.setVisible(true);
+        sCr.setVisible(false);
     }//GEN-LAST:event_jLabel7MouseClicked
     
     public void mostrarPanel(JPanel p){
