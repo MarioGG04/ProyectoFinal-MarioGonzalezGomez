@@ -38,6 +38,8 @@ public class PagPrincipal extends javax.swing.JFrame {
 
         jScrollPane1 = new javax.swing.JScrollPane();
         jPanel2 = new javax.swing.JPanel();
+        jInternalFrame1 = new javax.swing.JInternalFrame();
+        jPanel3 = new javax.swing.JPanel();
         jPanel13 = new javax.swing.JPanel();
         jLabel7 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -48,6 +50,9 @@ public class PagPrincipal extends javax.swing.JFrame {
         sCr = new javax.swing.JSeparator();
         sAp = new javax.swing.JSeparator();
         jLabel8 = new javax.swing.JLabel();
+        paneles1 = new org.Vista.Paneles();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,6 +66,33 @@ public class PagPrincipal extends javax.swing.JFrame {
         jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        jInternalFrame1.setBorder(null);
+        jInternalFrame1.setVisible(false);
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 260, Short.MAX_VALUE)
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 256, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout jInternalFrame1Layout = new javax.swing.GroupLayout(jInternalFrame1.getContentPane());
+        jInternalFrame1.getContentPane().setLayout(jInternalFrame1Layout);
+        jInternalFrame1Layout.setHorizontalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        jInternalFrame1Layout.setVerticalGroup(
+            jInternalFrame1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jPanel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+
+        jPanel2.add(jInternalFrame1, new org.netbeans.lib.awtextra.AbsoluteConstraints(520, 20, 260, 280));
+
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
 
         javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
@@ -71,7 +103,7 @@ public class PagPrincipal extends javax.swing.JFrame {
         );
         jPanel13Layout.setVerticalGroup(
             jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 930, Short.MAX_VALUE)
+            .addGap(0, 968, Short.MAX_VALUE)
         );
 
         jPanel2.add(jPanel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 90, 1030, -1));
@@ -126,6 +158,47 @@ public class PagPrincipal extends javax.swing.JFrame {
         jLabel8.setText("Hoteles");
         jPanel2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, 60, -1));
 
+        paneles1.setRoundBottomLeft(30);
+        paneles1.setRoundBottomRight(30);
+        paneles1.setRoundTopLeft(30);
+        paneles1.setRoundTopRight(30);
+        paneles1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                paneles1MouseClicked(evt);
+            }
+        });
+
+        jLabel2.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/Vector.png"))); // NOI18N
+
+        jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 12)); // NOI18N
+        jLabel3.setText("Filtros");
+
+        javax.swing.GroupLayout paneles1Layout = new javax.swing.GroupLayout(paneles1);
+        paneles1.setLayout(paneles1Layout);
+        paneles1Layout.setHorizontalGroup(
+            paneles1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneles1Layout.createSequentialGroup()
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(17, Short.MAX_VALUE))
+        );
+        paneles1Layout.setVerticalGroup(
+            paneles1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(paneles1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(paneles1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(paneles1Layout.createSequentialGroup()
+                        .addComponent(jLabel3)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+        );
+
+        jPanel2.add(paneles1, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 30, 100, 30));
+
         jScrollPane1.setViewportView(jPanel2);
 
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 42, 1040, 520));
@@ -170,6 +243,14 @@ public class PagPrincipal extends javax.swing.JFrame {
         sAp.setVisible(true);
         sCr.setVisible(false);
     }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void paneles1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_paneles1MouseClicked
+     
+        if(jInternalFrame1.isVisible())
+            jInternalFrame1.setVisible(false);
+        else
+            jInternalFrame1.setVisible(true);
+    }//GEN-LAST:event_paneles1MouseClicked
     
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
@@ -218,7 +299,10 @@ public class PagPrincipal extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JInternalFrame jInternalFrame1;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
@@ -227,7 +311,9 @@ public class PagPrincipal extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
+    private org.Vista.Paneles paneles1;
     private javax.swing.JSeparator sAp;
     private javax.swing.JSeparator sCr;
     private javax.swing.JSeparator sHt;

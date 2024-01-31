@@ -19,6 +19,7 @@ org\Vista\IniciarS$6.class
 org\Vista\RecuperarPass$3.class
 org\Vista\PagPrincipal$4.class
 org\model\Reservas.class
+org\Vista\Paneles.class
 org\Vista\IniciarS$2.class
 org\Vista\Apartamentos.class
 org\Controlador\EmailUtil.class
