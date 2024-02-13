@@ -4,9 +4,11 @@
  */
 package org.Vista;
 
+import javax.swing.JPanel;
+
 /**
  *
- * @author Mario Clase
+ * @author Mario González Gómez
  */
 public class Apartamentos extends javax.swing.JPanel {
 
@@ -30,15 +32,15 @@ public class Apartamentos extends javax.swing.JPanel {
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel10 = new javax.swing.JLabel();
+        Ap3 = new javax.swing.JLabel();
+        Ap1 = new javax.swing.JLabel();
+        Ap2 = new javax.swing.JLabel();
+        Ap4 = new javax.swing.JLabel();
+        Ap6 = new javax.swing.JLabel();
+        Ap5 = new javax.swing.JLabel();
+        Ap7 = new javax.swing.JLabel();
+        Ap9 = new javax.swing.JLabel();
+        Ap8 = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(1040, 930));
         setPreferredSize(new java.awt.Dimension(1040, 930));
@@ -67,32 +69,86 @@ public class Apartamentos extends javax.swing.JPanel {
 
         jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 880, 1060, 90));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3256.png"))); // NOI18N
-        jPanel13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, -1, -1));
+        Ap3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3256.png"))); // NOI18N
+        Ap3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap3MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap3, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, -1, -1));
 
-        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1256.png"))); // NOI18N
-        jPanel13.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
+        Ap1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1256.png"))); // NOI18N
+        Ap1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap1MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap1, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2256.png"))); // NOI18N
-        jPanel13.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, -1));
+        Ap2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2256.png"))); // NOI18N
+        Ap2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap2MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap2, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, -1));
 
-        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4256.png"))); // NOI18N
-        jPanel13.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
+        Ap4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4256.png"))); // NOI18N
+        Ap4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap4MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap4, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6256.png"))); // NOI18N
-        jPanel13.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
+        Ap6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6256.png"))); // NOI18N
+        Ap6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap6MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
 
-        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5256.png"))); // NOI18N
-        jPanel13.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
+        Ap5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5256.png"))); // NOI18N
+        Ap5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap5MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap5, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/7256.png"))); // NOI18N
-        jPanel13.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, -1, -1));
+        Ap7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/7256.png"))); // NOI18N
+        Ap7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap7MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap7, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, -1, -1));
 
-        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/9256.png"))); // NOI18N
-        jPanel13.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, -1, -1));
+        Ap9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/9256.png"))); // NOI18N
+        Ap9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap9MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, -1, -1));
 
-        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/8256.png"))); // NOI18N
-        jPanel13.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, -1, -1));
+        Ap8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/8256.png"))); // NOI18N
+        Ap8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        Ap8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                Ap8MouseClicked(evt);
+            }
+        });
+        jPanel13.add(Ap8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -113,19 +169,197 @@ public class Apartamentos extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap1MouseClicked
+        AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A1I5-246.png")));
+        
+        al.titulo.setText("Multihouse - Moderno Apartamento Vila Olímpia");
+        al.Desc.setText("Multihouse - Moderno Apartamento Vila Olímpia ofrece terraza y vistas a la ciudad.\n"
+                + "Está en São Paulo, a 4,2 km de Parque Ibirapuera y a 5,4 km de Pabellón de Ciccillo Matarazzo.\n"
+                + "Este apartamento dispone de parking privado gratis, recepción 24 horas y wifi gratis.");
+        al.lblPre.setText("142€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_Ap1MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap2MouseClicked
+        AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A2500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A2I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A2I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A2I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A2I5-246.png")));
 
+        al.titulo.setText("Puerto Cala Vadella");
+        al.Desc.setText("Situado con vistas a la playa de Cala Vadella, en la soleada isla de Ibiza, el Puerto Cala Vadella ofrece apartamentos\n"
+                + "bien equipados ideales para unas vacaciones familiares bajo el sol.\n" +
+"\n" +
+"Los apartamentos del Aparthotel Puerto Cala Vadella cuentan con cocina, donde usted puede preparar sus propias comidas para toda la familia.");
+        al.lblPre.setText("150€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap2MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap3MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A3500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A3I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A3I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A3I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A3I5-246.png")));
+
+        al.titulo.setText("Apartamentos Torrelaguna");
+        al.Desc.setText("El Torrelaguna Apartments ocupa unos jardines mediterráneos hermosos y ofrece 2 piscinas al aire libre\n"
+                + "para adultos y 2 piscinas adicionales para niños.\n"
+                + " Además, se encuentran a 250 metros de la playa Playazo de Vera, en la costa de Almería.");
+        al.lblPre.setText("77€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap3MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap4MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A4500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A4I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A4I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A4I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A4I5-246.png")));
+
+        al.titulo.setText("Habitación en Illescas");
+        al.Desc.setText("Mi alojamiento es bueno para parejas, aventureros, y viajeros de negocios. Se suministra ropa de cama\n"
+                + "y toallas, artículos de tocador y productos de limpieza.\n"
+                + "Baño privado completo en vivienda compartida. "
+                + "Puedes usar la cocina, con nevera individual y el jardín. Wifi.");
+        al.lblPre.setText("40€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap4MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap5MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A5500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A5I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A5I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A5I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A5I5-246.png")));
+
+        al.titulo.setText("Casa de ensueño en la montaña");
+        al.Desc.setText("Amanecer escuchando todo tipo de fauna y atardecer observando ciervos con todas las comodidades de la ciudad.\n" +
+"Silencio absoluto más allá de el de los animales.\n" +
+"Tu paso previo a vivir en la montaña.");
+        al.lblPre.setText("200€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap5MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap6MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A6500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A6I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A6I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A6I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A6I5-246.png")));
+
+        al.titulo.setText("Habitación en chalet de lujo");
+        al.Desc.setText("Descansa y relájate en este espacio tranquilo y elegante");
+        al.lblPre.setText("90€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap6MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap7MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A7500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A7I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A7I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A7I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A7I5-246.png")));
+
+        al.titulo.setText("Habitación Doble en ManzaHogar");
+        al.Desc.setText("Bienvenid@ a tu alojamiento en un acogedor chalet al lado del Parque Natural de La Pedriza.\n"
+                + "Se trata de una habitación doble que cuenta con todas las comodidades como televisión con netflix, HBO\n"
+                + "y demás plataformas, armario amplio, y termostato individual para regulación de la temperatura de la calefacción (suelo radiante).");
+        al.lblPre.setText("73€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap7MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap8MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A8500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A8I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A8I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A8I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A8I5-246.png")));
+
+        al.titulo.setText("Casa de Campo El Encinar-Piscina, Padel, Barbacoa");
+        al.Desc.setText("El Encinar es una finca de 10.000 m. Ubicada en un paraje natural de encinas a tan sólo 58 kilómetros de Madrid y 35 de Toledo.\n"
+                + "Se accede a ella desde una pista de tierra de 5,5 km sale de Santa Cruz del Retamar, 10 a 20min.\n"
+                + "Cuando llueve el único acceso es por Torre de Esteban de Hambram.");
+        al.lblPre.setText("405€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap8MouseClicked
+    /**
+     * 
+     * @param evt 
+     */
+    private void Ap9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_Ap9MouseClicked
+AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A9500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A9I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A9I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A9I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/A9I5-246.png")));
+
+        al.titulo.setText("Amplio, luminoso, con encanto, en plena naturaleza");
+        al.Desc.setText("Disfruta de un nuevo espacio en plena sierra de Madrid.\n" +
+        "Se trata de la planta superior de un chalet independiente, construido en 2020.\n"
+                + "Tiene una superficie de 160m2 útiles, con todo tipo de comodidades para disfrutar en familia o amigos desde un fin de semana, viajes de negocios,\n"
+                + "larga estancia o  unas buenas vacaciones.");
+        al.lblPre.setText("90€");
+        mostrarPanel(al);    }//GEN-LAST:event_Ap9MouseClicked
+        
+    /**
+     * 
+     * @param p 
+     */
+    public void mostrarPanel(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(1040, 930);
+        p.setLocation(0,0);   
+        //quitamos la ventana anterior y mostramos la nueva
+        removeAll();
+        add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        revalidate();
+        repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel Ap1;
+    private javax.swing.JLabel Ap2;
+    private javax.swing.JLabel Ap3;
+    private javax.swing.JLabel Ap4;
+    private javax.swing.JLabel Ap5;
+    private javax.swing.JLabel Ap6;
+    private javax.swing.JLabel Ap7;
+    private javax.swing.JLabel Ap8;
+    private javax.swing.JLabel Ap9;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
-    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     // End of variables declaration//GEN-END:variables

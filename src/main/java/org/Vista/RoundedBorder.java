@@ -11,7 +11,7 @@ import javax.swing.border.Border;
 
 /**
  *
- * @author Mario Clase
+ * @author Mario González Gómez
  */
 class RoundedBorder implements Border {
     private int radius;

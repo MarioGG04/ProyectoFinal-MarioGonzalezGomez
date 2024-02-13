@@ -14,9 +14,16 @@ import javax.mail.internet.MimeMessage;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class EmailUtil {
+    /**
+     * 
+     * @param session
+     * @param toEmail
+     * @param subject
+     * @param body 
+     */
     public static void sendEmail(Session session, String toEmail, String subject, String body) {
     try {
         

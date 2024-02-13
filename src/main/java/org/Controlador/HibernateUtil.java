@@ -24,6 +24,13 @@ public static SessionFactory buildSessionFactory() {
     "hibernate.cfg.xml");
   return configuration.buildSessionFactory();
 }
+/**
+ * 
+ * @return 
+ */
+public static SessionFactory getSessionFactory() {
+		return sessionFactory;
+	}
 
     // Método para cerrar la sesión
     public static void closeSession(Session session) {
@@ -53,7 +60,12 @@ public static SessionFactory buildSessionFactory() {
             e.printStackTrace();
         }
     }
-    
+    /**
+     * 
+     * @param email
+     * @param pass
+     * @return 
+     */
     public static boolean comprobarPass(String email, String pass){
         
         Usuario usr = obtenerUsuario(email);
@@ -66,7 +78,11 @@ public static SessionFactory buildSessionFactory() {
             return false;
         }
     }
-    
+    /**
+     * 
+     * @param user
+     * @param pass 
+     */
     public static void actualizarUsuario(String user, String pass) {
         SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
         Session session = sessionFactory.openSession();
@@ -100,7 +116,11 @@ public static SessionFactory buildSessionFactory() {
     }
 }
 
-    
+    /**
+     * 
+     * @param email
+     * @return 
+     */
     public static Usuario obtenerUsuario(String email) {
         Session sesion = sessionFactory.openSession();
     try  {

@@ -6,7 +6,7 @@ package org.Vista;
 
 /**
  *
- * @author Mario Clase
+ * @author Mario González Gómez
  */
 public class AlojamientoPg extends javax.swing.JPanel {
 
@@ -15,6 +15,7 @@ public class AlojamientoPg extends javax.swing.JPanel {
      */
     public AlojamientoPg() {
         initComponents();
+        
         
     }
 
@@ -37,13 +38,20 @@ public class AlojamientoPg extends javax.swing.JPanel {
         icon4 = new javax.swing.JLabel();
         titulo = new javax.swing.JLabel();
         baños = new org.Vista.Paneles();
+        jLabel1 = new javax.swing.JLabel();
         camas = new org.Vista.Paneles();
+        jLabel3 = new javax.swing.JLabel();
         wifi = new org.Vista.Paneles();
+        jLabel4 = new javax.swing.JLabel();
         precio = new org.Vista.Paneles();
         lblPre = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jTextArea1 = new javax.swing.JTextArea();
         desayuno = new org.Vista.Paneles();
+        jLabel5 = new javax.swing.JLabel();
         titDes = new javax.swing.JLabel();
-        Desc = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        Desc = new javax.swing.JTextArea();
 
         setMinimumSize(new java.awt.Dimension(1040, 930));
         setPreferredSize(new java.awt.Dimension(1040, 930));
@@ -89,8 +97,9 @@ public class AlojamientoPg extends javax.swing.JPanel {
         icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5256.png"))); // NOI18N
         jPanel13.add(icon4, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, -1, -1));
 
+        titulo.setFont(new java.awt.Font("Century Gothic", 1, 24)); // NOI18N
         titulo.setText("jLabel5");
-        jPanel13.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, 480, 30));
+        jPanel13.add(titulo, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 540, 540, 30));
 
         baños.setMinimumSize(new java.awt.Dimension(50, 50));
         baños.setPreferredSize(new java.awt.Dimension(50, 50));
@@ -98,17 +107,11 @@ public class AlojamientoPg extends javax.swing.JPanel {
         baños.setRoundBottomRight(15);
         baños.setRoundTopLeft(15);
         baños.setRoundTopRight(15);
+        baños.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout bañosLayout = new javax.swing.GroupLayout(baños);
-        baños.setLayout(bañosLayout);
-        bañosLayout.setHorizontalGroup(
-            bañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        bañosLayout.setVerticalGroup(
-            bañosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/BaIco.png"))); // NOI18N
+        jLabel1.setText("jLabel1");
+        baños.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 100, -1));
 
         jPanel13.add(baños, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 600, 100, 100));
 
@@ -118,15 +121,28 @@ public class AlojamientoPg extends javax.swing.JPanel {
         camas.setRoundTopLeft(15);
         camas.setRoundTopRight(15);
 
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/CamaIco.png"))); // NOI18N
+        jLabel3.setText("jLabel1");
+
         javax.swing.GroupLayout camasLayout = new javax.swing.GroupLayout(camas);
         camas.setLayout(camasLayout);
         camasLayout.setHorizontalGroup(
             camasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(camasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(camasLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         camasLayout.setVerticalGroup(
             camasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(camasLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(camasLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel3)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanel13.add(camas, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 600, 100, 100));
@@ -137,15 +153,28 @@ public class AlojamientoPg extends javax.swing.JPanel {
         wifi.setRoundTopLeft(15);
         wifi.setRoundTopRight(15);
 
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/wifiIco.png"))); // NOI18N
+        jLabel4.setText("jLabel1");
+
         javax.swing.GroupLayout wifiLayout = new javax.swing.GroupLayout(wifi);
         wifi.setLayout(wifiLayout);
         wifiLayout.setHorizontalGroup(
             wifiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(wifiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(wifiLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         wifiLayout.setVerticalGroup(
             wifiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(wifiLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(wifiLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel4)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanel13.add(wifi, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 600, -1, -1));
@@ -157,8 +186,22 @@ public class AlojamientoPg extends javax.swing.JPanel {
         precio.setRoundTopRight(15);
         precio.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
+        lblPre.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblPre.setText("jLabel1");
-        precio.add(lblPre, new org.netbeans.lib.awtextra.AbsoluteConstraints(73, 28, 65, 28));
+        lblPre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        precio.add(lblPre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 70, 28));
+
+        jButton1.setBackground(new java.awt.Color(153, 153, 153));
+        jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Reservar ya");
+        jButton1.setEnabled(false);
+        precio.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 120, 40));
+
+        jTextArea1.setColumns(20);
+        jTextArea1.setRows(5);
+        jTextArea1.setText("Por problemas de ultima\nhora no he podido terminar\nde gestionar las reservas\nlo incluire para el proyecto\nde final de grado");
+        precio.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 180, -1));
 
         jPanel13.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 600, 220, 260));
 
@@ -168,24 +211,47 @@ public class AlojamientoPg extends javax.swing.JPanel {
         desayuno.setRoundTopLeft(15);
         desayuno.setRoundTopRight(15);
 
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/DesIco.png"))); // NOI18N
+        jLabel5.setText("jLabel1");
+
         javax.swing.GroupLayout desayunoLayout = new javax.swing.GroupLayout(desayuno);
         desayuno.setLayout(desayunoLayout);
         desayunoLayout.setHorizontalGroup(
             desayunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(desayunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desayunoLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 100, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
         desayunoLayout.setVerticalGroup(
             desayunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 100, Short.MAX_VALUE)
+            .addGroup(desayunoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(desayunoLayout.createSequentialGroup()
+                    .addGap(0, 0, Short.MAX_VALUE)
+                    .addComponent(jLabel5)
+                    .addGap(0, 0, Short.MAX_VALUE)))
         );
 
         jPanel13.add(desayuno, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, -1, -1));
 
-        titDes.setText("jLabel8");
+        titDes.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        titDes.setText("Descripción");
         jPanel13.add(titDes, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 730, -1, -1));
 
-        Desc.setText("jLabel9");
-        jPanel13.add(Desc, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 770, -1, -1));
+        jScrollPane1.setBorder(null);
+
+        Desc.setEditable(false);
+        Desc.setBackground(new java.awt.Color(255, 255, 255));
+        Desc.setColumns(20);
+        Desc.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        Desc.setRows(5);
+        Desc.setBorder(null);
+        jScrollPane1.setViewportView(Desc);
+
+        jPanel13.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 770, 560, 100));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -209,7 +275,7 @@ public class AlojamientoPg extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    public javax.swing.JLabel Desc;
+    public javax.swing.JTextArea Desc;
     private org.Vista.Paneles baños;
     private org.Vista.Paneles camas;
     private org.Vista.Paneles desayuno;
@@ -218,9 +284,16 @@ public class AlojamientoPg extends javax.swing.JPanel {
     public javax.swing.JLabel icon3;
     public javax.swing.JLabel icon4;
     public javax.swing.JLabel iconG;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JLabel lblPre;
     private org.Vista.Paneles precio;
     public javax.swing.JLabel titDes;

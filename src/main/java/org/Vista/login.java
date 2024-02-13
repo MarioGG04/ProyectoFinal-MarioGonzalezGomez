@@ -45,6 +45,7 @@ public class login extends javax.swing.JFrame {
         lbl1 = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
+        icono = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setLocation(new java.awt.Point(0, 0));
@@ -54,6 +55,7 @@ public class login extends javax.swing.JFrame {
 
         panelMov.setBackground(new java.awt.Color(255, 255, 255));
         panelMov.setPreferredSize(new java.awt.Dimension(570, 584));
+        panelMov.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         iniciar.setBackground(new java.awt.Color(154, 154, 154));
         iniciar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -64,6 +66,7 @@ public class login extends javax.swing.JFrame {
                 iniciarActionPerformed(evt);
             }
         });
+        panelMov.add(iniciar, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 260, 167, 48));
 
         registrar.setBackground(new java.awt.Color(154, 154, 154));
         registrar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -74,9 +77,12 @@ public class login extends javax.swing.JFrame {
                 registrarActionPerformed(evt);
             }
         });
+        panelMov.add(registrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 260, 167, 48));
+        panelMov.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
 
         lbl1.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lbl1.setText("Iniciar sesión / Registrarse");
+        panelMov.add(lbl1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, -1));
 
         cerrar.setBackground(new java.awt.Color(255, 255, 255));
         cerrar.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -96,42 +102,10 @@ public class login extends javax.swing.JFrame {
         lblX.setText("X");
         cerrar.add(lblX, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 20, 30));
 
-        javax.swing.GroupLayout panelMovLayout = new javax.swing.GroupLayout(panelMov);
-        panelMov.setLayout(panelMovLayout);
-        panelMovLayout.setHorizontalGroup(
-            panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelMovLayout.createSequentialGroup()
-                .addGroup(panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(panelMovLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lbl1)
-                        .addGap(293, 293, 293)
-                        .addComponent(cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelMovLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(panelMovLayout.createSequentialGroup()
-                        .addGap(90, 90, 90)
-                        .addComponent(iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(42, 42, 42)
-                        .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 167, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        panelMovLayout.setVerticalGroup(
-            panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelMovLayout.createSequentialGroup()
-                .addGap(20, 20, 20)
-                .addGroup(panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(lbl1)
-                    .addComponent(cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(10, 10, 10)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(117, 117, 117)
-                .addGroup(panelMovLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(iniciar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(registrar, javax.swing.GroupLayout.PREFERRED_SIZE, 48, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(154, 154, 154))
-        );
+        panelMov.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, -1));
+
+        icono.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/logo3.png"))); // NOI18N
+        panelMov.add(icono, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 70, 200, 150));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -235,6 +209,7 @@ public class login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel cerrar;
+    private javax.swing.JLabel icono;
     private javax.swing.JButton iniciar;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JLabel lbl1;

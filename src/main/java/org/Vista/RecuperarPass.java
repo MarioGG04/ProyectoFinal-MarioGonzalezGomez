@@ -28,7 +28,9 @@ public class RecuperarPass extends javax.swing.JPanel {
         initComponents();
         FlatLightLaf.setup();
         continuar.putClientProperty( "FlatLaf.style", "arc: 15");
-        email.putClientProperty("FlatLaf.style", "arc: 15"); 
+        email.putClientProperty("FlatLaf.style", "arc: 15");
+        email.putClientProperty( "JTextField.placeholderText", "Intruduce tu Email");
+        codigoT.putClientProperty( "JTextField.placeholderText", "Intruduce el codigo");
         aviso.setVisible(false);
         codigoT.setEnabled(false);
         continuar.setEnabled(false);
@@ -65,7 +67,6 @@ public class RecuperarPass extends javax.swing.JPanel {
         lbl1.setText("Recuperar contraseña");
 
         email.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        email.setText("Intruduce tu Email para enviar la ");
         email.setToolTipText("Introduce tu correo electrónico");
         email.setPreferredSize(new java.awt.Dimension(536, 60));
         email.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -112,7 +113,6 @@ public class RecuperarPass extends javax.swing.JPanel {
         cerrar.add(lblX, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 0, 20, 30));
 
         codigoT.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        codigoT.setText("Introduce el código enviado a tu email");
         codigoT.setToolTipText("Introduce tu correo electrónico");
         codigoT.setPreferredSize(new java.awt.Dimension(536, 60));
         codigoT.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -160,27 +160,17 @@ public class RecuperarPass extends javax.swing.JPanel {
                 .addComponent(continuar, javax.swing.GroupLayout.PREFERRED_SIZE, 144, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(60, 60, 60))
             .addGroup(fondoLayout.createSequentialGroup()
+                .addGap(20, 20, 20)
                 .addGroup(fondoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(fondoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
                         .addComponent(lbl1)
                         .addGap(321, 321, 321)
                         .addComponent(cerrar, javax.swing.GroupLayout.PREFERRED_SIZE, 26, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(fondoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(fondoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(fondoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(fondoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(lblCode, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(fondoLayout.createSequentialGroup()
-                        .addGap(20, 20, 20)
-                        .addComponent(codigoT, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 538, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(email, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(lblCode, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(codigoT, javax.swing.GroupLayout.PREFERRED_SIZE, 530, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(0, 0, Short.MAX_VALUE))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, fondoLayout.createSequentialGroup()
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)

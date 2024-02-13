@@ -71,6 +71,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 880, 1060, 80));
 
         jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1256H.png"))); // NOI18N
+        jLabel3.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel3MouseClicked(evt);
@@ -79,6 +80,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
 
         jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2256H.png"))); // NOI18N
+        jLabel4.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel4MouseClicked(evt);
@@ -87,6 +89,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, -1));
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3256H.png"))); // NOI18N
+        jLabel1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel1MouseClicked(evt);
@@ -95,6 +98,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, -1, -1));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6256H.png"))); // NOI18N
+        jLabel6.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel6MouseClicked(evt);
@@ -103,6 +107,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
 
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5256H.png"))); // NOI18N
+        jLabel7.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel7MouseClicked(evt);
@@ -111,6 +116,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4256H.png"))); // NOI18N
+        jLabel5.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel5MouseClicked(evt);
@@ -119,6 +125,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/7256H.png"))); // NOI18N
+        jLabel8.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel8MouseClicked(evt);
@@ -127,6 +134,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, -1, -1));
 
         jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/8256H.png"))); // NOI18N
+        jLabel10.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel10MouseClicked(evt);
@@ -135,6 +143,7 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, -1, -1));
 
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/9256H.png"))); // NOI18N
+        jLabel9.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
         jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jLabel9MouseClicked(evt);
@@ -161,7 +170,10 @@ public class Hoteles extends javax.swing.JPanel {
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
        AlojamientoPg al = new AlojamientoPg();
        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1500H.png")));
@@ -172,11 +184,15 @@ public class Hoteles extends javax.swing.JPanel {
        
        al.titulo.setText("Renaissance Barcelona Hotel");
        al.titDes.setText("Descripción");
-       al.Desc.setText("Renaissance Barcelona Hotel ofrece una terraza en la azotea y te sitúa a cinco minutos a pie de Paseo de Gracia. Regálate una sesión de masajes con piedras calientes, tratamientos faciales o aromaterapia en el spa y descubre los manjares de Rumbo Bar & Eatery.");
+       al.Desc.setText("Renaissance Barcelona Hotel ofrece una terraza en la azotea y te sitúa a cinco minutos a pie de Paseo de Gracia.\n"
+               + "Regálate una sesión de masajes con piedras calientes, tratamientos faciales o aromaterapia en el spa y descubre los manjares de Rumbo Bar & Eatery.");
        al.lblPre.setText("235€");
        mostrarPanel(al);
     }//GEN-LAST:event_jLabel3MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H2500.png")));
@@ -187,11 +203,15 @@ public class Hoteles extends javax.swing.JPanel {
 
         al.titulo.setText("Hotel Carlos III");
         al.titDes.setText("Descripción");
-        al.Desc.setText("El Hotel Carlos III goza de una ubicación céntrica en Águilas, a 50 metros de la playa y del ayuntamiento. El hotel ofrece conexión Wi-Fi gratuita, recepción 24 horas y habitaciones con aire acondicionado.");
+        al.Desc.setText("El Hotel Carlos III goza de una ubicación céntrica en Águilas, a 50 metros de la playa y del ayuntamiento.\n"
+                + "El hotel ofrece conexión Wi-Fi gratuita, recepción 24 horas y habitaciones con aire acondicionado.");
         al.lblPre.setText("130€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel4MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H3500.png")));
@@ -202,13 +222,18 @@ public class Hoteles extends javax.swing.JPanel {
 
         al.titulo.setText("Santa Barbara Golf and Ocean Club");
         al.titDes.setText("Descripción");
-        al.Desc.setText("El Santa Barbara Golf and Ocean Club se encuentra en Golf del Sur, a 100 metros de la playa. Ofrece piscina al aire libre, spa con bañera de hidromasaje y sauna y apartamentos con balcón privado.\n" +
+        al.Desc.setText("El Santa Barbara Golf and Ocean Club se encuentra en Golf del Sur, a 100 metros de la playa.\n"
+                + "Ofrece piscina al aire libre, spa con bañera de hidromasaje y sauna y apartamentos con balcón privado.\n" +
 "\n" +
-"Todos los apartamentos del Santa Barbara Golf and Ocean Club disponen de zona de estar con sofás, TV de pantalla plana vía satélite y cocina con nevera. El baño privado incluye secador de pelo y artículos de aseo gratuitos. Algunas habitaciones tienen vistas al mar y aire acondicionado.");
+"Todos los apartamentos del Santa Barbara Golf and Ocean Club disponen de zona de estar con sofás, TV de pantalla plana vía satélite y cocina con nevera.\n"
+                + "El baño privado incluye secador de pelo y artículos de aseo gratuitos. Algunas habitaciones tienen vistas al mar y aire acondicionado.");
         al.lblPre.setText("300€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel1MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H4500.png")));
@@ -223,7 +248,10 @@ public class Hoteles extends javax.swing.JPanel {
         al.lblPre.setText("200€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel5MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H5500.png")));
@@ -234,11 +262,15 @@ public class Hoteles extends javax.swing.JPanel {
 
         al.titulo.setText("Hotel Avenida");
         al.titDes.setText("Descripción");
-        al.Desc.setText("El Hotel Avenida está ubicado en el centro de Zaragoza, a 3 minutos a pie de la basílica del Pilar. Ofrece WiFi gratuita y habitaciones con aire acondicionado y TV de pantalla plana.");
+        al.Desc.setText("El Hotel Avenida está ubicado en el centro de Zaragoza, a 3 minutos a pie de la basílica del Pilar.\n"
+                + "Ofrece WiFi gratuita y habitaciones con aire acondicionado y TV de pantalla plana.");
         al.lblPre.setText("180€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel7MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H6500.png")));
@@ -253,7 +285,10 @@ public class Hoteles extends javax.swing.JPanel {
         al.lblPre.setText("148€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel6MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H7500.png")));
@@ -264,11 +299,15 @@ public class Hoteles extends javax.swing.JPanel {
 
         al.titulo.setText("Hotel Urdanibia Park");
         al.titDes.setText("Descripción");
-        al.Desc.setText("El Hotel Urdanibia Park está situado frente al Real Golf Club de San Sebastián, a unos 10 minutos en coche del centro de la ciudad y de las playas de Hondarribia y Hendaya. Hay WiFi y aparcamiento exterior gratuitos.");
+        al.Desc.setText("El Hotel Urdanibia Park está situado frente al Real Golf Club de San Sebastián, a unos 10 minutos en coche del centro\n"
+                + "de la ciudad y de las playas de Hondarribia y Hendaya. Hay WiFi y aparcamiento exterior gratuitos.");
         al.lblPre.setText("75€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel8MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H8500.png")));
@@ -279,11 +318,16 @@ public class Hoteles extends javax.swing.JPanel {
 
         al.titulo.setText("Hotel Las Tablas");
         al.titDes.setText("Descripción");
-        al.Desc.setText("Hotel Las Tablas se encuentra en Daimiel, a 34 km de Puerta de Toledo y a 32 km de Museo El Quijote. Este hotel de 3 estrellas ofrece restaurante y tiene habitaciones con aire acondicionado, wifi gratis y baño privado. Hay parking privado en el propio alojamiento");
+        al.Desc.setText("Hotel Las Tablas se encuentra en Daimiel, a 34 km de Puerta de Toledo y a 32 km de Museo El Quijote.\n"
+                + "Este hotel de 3 estrellas ofrece restaurante y tiene habitaciones con aire acondicionado, wifi gratis y baño privado.\n"
+                + "Hay parking privado en el propio alojamiento");
         al.lblPre.setText("90€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel10MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
          AlojamientoPg al = new AlojamientoPg();
         al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H9500.png")));
@@ -294,13 +338,18 @@ public class Hoteles extends javax.swing.JPanel {
 
         al.titulo.setText("Elba Costa Ballena Beach & Thalasso Resort");
         al.titDes.setText("Descripción");
-        al.Desc.setText("Este hotel de estilo mediterráneo está ubicado junto al campo de golf de Costa Ballena, a 2 minutos a pie de la playa. Cuenta con spa, piscina al aire libre y habitaciones con balcón privado.\n" +
-"\n" +
-"Las habitaciones del hotel Elba Costa Ballena Beach & Thalasso Resort disponen de aire acondicionado y baño privado con secador de pelo. Hay WiFi gratuita.");
+        al.Desc.setText("Este hotel de estilo mediterráneo está ubicado junto al campo de golf de Costa Ballena, a 2 minutos a pie de la playa.\n "
+                + "Cuenta con spa, piscina al aire libre y habitaciones con balcón privado.\n" +
+                "\n" +
+                "Las habitaciones del hotel Elba Costa Ballena Beach & Thalasso Resort disponen de aire acondicionado y baño privado con secador de pelo. Hay WiFi gratuita.");
         al.lblPre.setText("105€");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel9MouseClicked
-        public void mostrarPanel(JPanel p){
+    /**
+     * 
+     * @param p 
+     */    
+    public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
         p.setSize(1040, 930);
         p.setLocation(0,0);   

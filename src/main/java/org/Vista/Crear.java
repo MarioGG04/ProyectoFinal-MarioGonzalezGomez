@@ -5,12 +5,13 @@
 package org.Vista;
 
 import java.awt.Color;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import org.Controlador.HibernateUtil;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class Crear extends javax.swing.JFrame {
 
@@ -19,6 +20,18 @@ public class Crear extends javax.swing.JFrame {
      */
     public Crear() {
         initComponents();
+        nombre.putClientProperty( "JTextField.placeholderText", "Intruduce tu nombre");
+        apellidos.putClientProperty( "JTextField.placeholderText", "Intruduce tus apellidos");
+        email.putClientProperty( "JTextField.placeholderText", "Intruduce tu Email");
+        pass.putClientProperty( "JTextField.placeholderText", "Contraseña");
+        usuario.putClientProperty( "JTextField.placeholderText", "Intruduce tu usuario");
+        
+        email.putClientProperty("FlatLaf.style", "arc: 15"); 
+        apellidos.putClientProperty("FlatLaf.style", "arc: 15"); 
+        nombre.putClientProperty("FlatLaf.style", "arc: 15"); 
+        usuario.putClientProperty("FlatLaf.style", "arc: 15"); 
+        pass.putClientProperty("FlatLaf.style", "arc: 15"); 
+        
     }
 
     /**
@@ -39,7 +52,7 @@ public class Crear extends javax.swing.JFrame {
         lblPass = new javax.swing.JLabel();
         cerrar = new javax.swing.JPanel();
         lblX = new javax.swing.JLabel();
-        btnCrear = new javax.swing.JButton();
+        btnIni = new javax.swing.JButton();
         lblEmail1 = new javax.swing.JLabel();
         email = new javax.swing.JTextField();
         pass = new javax.swing.JPasswordField();
@@ -63,7 +76,6 @@ public class Crear extends javax.swing.JFrame {
         jPanel2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 60, 538, 10));
 
         apellidos.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        apellidos.setText("Intruduce tu apellido");
         apellidos.setToolTipText("Introduce tu correo electrónico");
         apellidos.setPreferredSize(new java.awt.Dimension(536, 60));
         apellidos.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -119,16 +131,16 @@ public class Crear extends javax.swing.JFrame {
 
         jPanel2.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
-        btnCrear.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
-        btnCrear.setForeground(new java.awt.Color(153, 153, 153));
-        btnCrear.setText("Iniciar sesión");
-        btnCrear.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
-        btnCrear.addActionListener(new java.awt.event.ActionListener() {
+        btnIni.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
+        btnIni.setForeground(new java.awt.Color(153, 153, 153));
+        btnIni.setText("Iniciar sesión");
+        btnIni.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(153, 153, 153), 2, true));
+        btnIni.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                btnCrearActionPerformed(evt);
+                btnIniActionPerformed(evt);
             }
         });
-        jPanel2.add(btnCrear, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 600, 140, 50));
+        jPanel2.add(btnIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 600, 140, 50));
 
         lblEmail1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail1.setForeground(new java.awt.Color(153, 153, 153));
@@ -136,7 +148,6 @@ public class Crear extends javax.swing.JFrame {
         jPanel2.add(lblEmail1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 37, -1));
 
         email.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        email.setText("Intruduce Email");
         email.setToolTipText("Introduce tu correo electrónico");
         email.setPreferredSize(new java.awt.Dimension(536, 60));
         email.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -150,8 +161,6 @@ public class Crear extends javax.swing.JFrame {
             }
         });
         jPanel2.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 410, 530, -1));
-
-        pass.setText("jPasswordField1");
         jPanel2.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 510, 530, 60));
 
         lblPass1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
@@ -160,7 +169,6 @@ public class Crear extends javax.swing.JFrame {
         jPanel2.add(lblPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 490, -1, -1));
 
         nombre.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        nombre.setText("Intruduce tu nombre");
         nombre.setToolTipText("Introduce tu correo electrónico");
         nombre.setPreferredSize(new java.awt.Dimension(536, 60));
         nombre.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -176,7 +184,6 @@ public class Crear extends javax.swing.JFrame {
         jPanel2.add(nombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 110, 530, -1));
 
         usuario.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
-        usuario.setText("Introduce tu usuario");
         usuario.setToolTipText("Introduce tu correo electrónico");
         usuario.setPreferredSize(new java.awt.Dimension(536, 60));
         usuario.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -210,19 +217,44 @@ public class Crear extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * 
+     * @param evt 
+     */
     private void apellidosMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_apellidosMouseClicked
         apellidos.setText("");
     }//GEN-LAST:event_apellidosMouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void apellidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_apellidosActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_apellidosActionPerformed
-
+    /**
+     * 
+     * @param evt 
+     */
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
         HibernateUtil hu = new HibernateUtil();
+        if(email.getText().contains("@")){
+            
+            if(pass.getText().length()<8){
+                
+            
+                hu.registrarUsuario(nombre.getText(), apellidos.getText(), usuario.getText(), email.getText(), pass.getText());
+                 JOptionPane.showMessageDialog(null, "Usuario creado correctamente.\nPulsa el botón de iniciar sesión.");
+            }else{
+                JOptionPane.showMessageDialog(null, "La contraseña tiene que tener como minimo 8 caracteres.", "Error", JOptionPane.ERROR_MESSAGE);
+            }
+        }else{
+            JOptionPane.showMessageDialog(null, "No es una direccion de correo valida.", "Error", JOptionPane.ERROR_MESSAGE);
 
-        hu.registrarUsuario(nombre.getText(), apellidos.getText(), usuario.getText(), email.getText(), pass.getText());
+        }
+        
+        
+       
+
     }//GEN-LAST:event_continuarActionPerformed
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
@@ -264,11 +296,11 @@ public class Crear extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_usuarioActionPerformed
 
-    private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
+    private void btnIniActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnIniActionPerformed
         IniciarS iniciar = new IniciarS();
         iniciar.setVisible(true);
         setVisible(false);
-    }//GEN-LAST:event_btnCrearActionPerformed
+    }//GEN-LAST:event_btnIniActionPerformed
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
         p.setSize(570, 584);
@@ -317,7 +349,7 @@ public class Crear extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidos;
-    private javax.swing.JButton btnCrear;
+    private javax.swing.JButton btnIni;
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
     private javax.swing.JTextField email;

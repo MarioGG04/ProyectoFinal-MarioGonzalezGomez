@@ -5,12 +5,19 @@
 package org.Vista;
 
 import java.awt.Color;
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import org.Controlador.HibernateUtil;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class IniciarS extends javax.swing.JFrame {
 
@@ -19,6 +26,10 @@ public class IniciarS extends javax.swing.JFrame {
      */
     public IniciarS() {
         initComponents();
+        email.putClientProperty("FlatLaf.style", "arc: 15");
+        email.putClientProperty( "JTextField.placeholderText", "Intruduce tu Email");
+        pass.putClientProperty("FlatLaf.style", "arc: 15");
+        pass.putClientProperty( "JTextField.placeholderText", "Contraseña");
     }
 
     /**
@@ -154,50 +165,93 @@ public class IniciarS extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
+    /**
+     * 
+     * @param evt 
+     */
     private void emailMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_emailMouseClicked
         email.setText("");
     }//GEN-LAST:event_emailMouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void emailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_emailActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_emailActionPerformed
-
+    /**
+     * 
+     * @param evt 
+     */
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
+          try {
+        File f = new File("Logs.txt");
+        
+        f.createNewFile();
+        
+      
+            BufferedWriter bw = new BufferedWriter(new FileWriter(f));
+        
         HibernateUtil hu = new HibernateUtil();
         PagPrincipal pri = new PagPrincipal();
-        if(hu.comprobarPass(email.getText(), pass.getText())){
-            pri.setVisible(true);
-            setVisible(false);
+  
+            if(hu.comprobarPass(email.getText(), pass.getText())){
+                pri.aux.setText(email.getText());
+                bw.write(email.getText());
+                bw.close();
+                
+                pri.setVisible(true);
+                setVisible(false);
+
+            }
+           } catch (IOException ex) {
+            Logger.getLogger(IniciarS.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }//GEN-LAST:event_continuarActionPerformed
-
+    /**
+     * 
+     * @param evt 
+     */
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
         System.exit(0);
     }//GEN-LAST:event_cerrarMouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void cerrarMouseEntered(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseEntered
         lblX.setForeground(Color.red);
     }//GEN-LAST:event_cerrarMouseEntered
-
+    /**
+     * 
+     * @param evt 
+     */
     private void cerrarMouseExited(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseExited
         lblX.setForeground(Color.black);
     }//GEN-LAST:event_cerrarMouseExited
-
+    /**
+     * 
+     * @param evt 
+     */
     private void jLabel2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel2MouseClicked
         RecuperarPass rp = new RecuperarPass();
         
         mostrarPanel(rp);
     }//GEN-LAST:event_jLabel2MouseClicked
-
+    /**
+     * 
+     * @param evt 
+     */
     private void btnCrearActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCrearActionPerformed
         Crear crear = new Crear();
         crear.setVisible(true);
         setVisible(false);
 
     }//GEN-LAST:event_btnCrearActionPerformed
-    
+    /**
+     * 
+     * @param p 
+     */
     public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
         p.setSize(566, 361);

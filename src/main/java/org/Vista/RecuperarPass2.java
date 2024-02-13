@@ -29,6 +29,8 @@ public class RecuperarPass2 extends javax.swing.JPanel {
         FlatLightLaf.setup();
         continuar.putClientProperty( "FlatLaf.style", "arc: 15");
         pass.putClientProperty("FlatLaf.style", "arc: 15");
+        pass.putClientProperty( "JTextField.placeholderText", "Contraseña");
+        pass1.putClientProperty( "JTextField.placeholderText", "Contraseña");
         lblEm.setVisible(false);
         aviso.setVisible(false);
     }
@@ -101,7 +103,6 @@ public class RecuperarPass2 extends javax.swing.JPanel {
 
         jPanel1.add(cerrar, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 20, 26, 30));
 
-        pass.setText("jPasswordField1");
         pass.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 passMouseClicked(evt);
@@ -115,7 +116,6 @@ public class RecuperarPass2 extends javax.swing.JPanel {
         jPanel1.add(pass, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 100, 530, 60));
         jPanel1.add(lblEm, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 80, -1, -1));
 
-        pass1.setText("jPasswordField1");
         pass1.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 pass1MouseClicked(evt);

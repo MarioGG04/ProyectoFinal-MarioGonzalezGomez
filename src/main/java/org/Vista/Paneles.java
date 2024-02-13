@@ -15,7 +15,7 @@ import javax.swing.JPanel;
 
 /**
  *
- * @author Alumno
+ * @author Mario González Gómez
  */
 public class Paneles extends JPanel{
     public int getRoundTopLeft() {
