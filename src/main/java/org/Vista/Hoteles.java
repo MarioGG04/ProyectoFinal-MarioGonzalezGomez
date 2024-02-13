@@ -4,9 +4,11 @@
  */
 package org.Vista;
 
+import javax.swing.JPanel;
+
 /**
  *
- * @author Mario Clase
+ * @author Mario González Gómez
  */
 public class Hoteles extends javax.swing.JPanel {
 
@@ -29,17 +31,23 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         jLabel2 = new javax.swing.JLabel();
-        jPanel15 = new javax.swing.JPanel();
-        jPanel16 = new javax.swing.JPanel();
-        jPanel17 = new javax.swing.JPanel();
-        jPanel18 = new javax.swing.JPanel();
-        jPanel19 = new javax.swing.JPanel();
-        jPanel20 = new javax.swing.JPanel();
-        jPanel21 = new javax.swing.JPanel();
-        jPanel22 = new javax.swing.JPanel();
-        jPanel23 = new javax.swing.JPanel();
+        jLabel3 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+
+        setMinimumSize(new java.awt.Dimension(1040, 930));
+        setPreferredSize(new java.awt.Dimension(1040, 930));
 
         jPanel13.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel13.setMinimumSize(new java.awt.Dimension(1040, 930));
+        jPanel13.setPreferredSize(new java.awt.Dimension(1040, 930));
+        jPanel13.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setText("@nestify");
 
@@ -48,216 +56,274 @@ public class Hoteles extends javax.swing.JPanel {
         jPanel14Layout.setHorizontalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(521, Short.MAX_VALUE)
+                .addContainerGap(505, Short.MAX_VALUE)
                 .addComponent(jLabel2)
-                .addGap(473, 473, 473))
+                .addGap(509, 509, 509))
         );
         jPanel14Layout.setVerticalGroup(
             jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel14Layout.createSequentialGroup()
-                .addContainerGap(28, Short.MAX_VALUE)
+                .addGap(20, 20, 20)
                 .addComponent(jLabel2)
-                .addGap(26, 26, 26))
+                .addGap(37, 37, 37))
         );
 
-        jPanel15.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jPanel13.add(jPanel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 880, 1060, 80));
 
-        javax.swing.GroupLayout jPanel15Layout = new javax.swing.GroupLayout(jPanel15);
-        jPanel15.setLayout(jPanel15Layout);
-        jPanel15Layout.setHorizontalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
-        );
-        jPanel15Layout.setVerticalGroup(
-            jPanel15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1256H.png"))); // NOI18N
+        jLabel3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel3MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel16Layout = new javax.swing.GroupLayout(jPanel16);
-        jPanel16.setLayout(jPanel16Layout);
-        jPanel16Layout.setHorizontalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
-        );
-        jPanel16Layout.setVerticalGroup(
-            jPanel16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/2256H.png"))); // NOI18N
+        jLabel4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel4MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
-        jPanel17.setLayout(jPanel17Layout);
-        jPanel17Layout.setHorizontalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel17Layout.setVerticalGroup(
-            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/3256H.png"))); // NOI18N
+        jLabel1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel1MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel18Layout = new javax.swing.GroupLayout(jPanel18);
-        jPanel18.setLayout(jPanel18Layout);
-        jPanel18Layout.setHorizontalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel18Layout.setVerticalGroup(
-            jPanel18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/6256H.png"))); // NOI18N
+        jLabel6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel6MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 300, -1, -1));
 
-        javax.swing.GroupLayout jPanel19Layout = new javax.swing.GroupLayout(jPanel19);
-        jPanel19.setLayout(jPanel19Layout);
-        jPanel19Layout.setHorizontalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel19Layout.setVerticalGroup(
-            jPanel19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/5256H.png"))); // NOI18N
+        jLabel7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel7MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 300, -1, -1));
 
-        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
-        jPanel20.setLayout(jPanel20Layout);
-        jPanel20Layout.setHorizontalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel20Layout.setVerticalGroup(
-            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/4256H.png"))); // NOI18N
+        jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel5MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 300, -1, -1));
 
-        jPanel21.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/7256H.png"))); // NOI18N
+        jLabel8.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel8MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, -1, -1));
 
-        javax.swing.GroupLayout jPanel21Layout = new javax.swing.GroupLayout(jPanel21);
-        jPanel21.setLayout(jPanel21Layout);
-        jPanel21Layout.setHorizontalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel21Layout.setVerticalGroup(
-            jPanel21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
+        jLabel10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/8256H.png"))); // NOI18N
+        jLabel10.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel10MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 600, -1, -1));
 
-        jPanel22.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-
-        javax.swing.GroupLayout jPanel22Layout = new javax.swing.GroupLayout(jPanel22);
-        jPanel22.setLayout(jPanel22Layout);
-        jPanel22Layout.setHorizontalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 246, Short.MAX_VALUE)
-        );
-        jPanel22Layout.setVerticalGroup(
-            jPanel22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel23Layout = new javax.swing.GroupLayout(jPanel23);
-        jPanel23.setLayout(jPanel23Layout);
-        jPanel23Layout.setHorizontalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 258, Short.MAX_VALUE)
-        );
-        jPanel23Layout.setVerticalGroup(
-            jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 241, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout jPanel13Layout = new javax.swing.GroupLayout(jPanel13);
-        jPanel13.setLayout(jPanel13Layout);
-        jPanel13Layout.setHorizontalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGroup(jPanel13Layout.createSequentialGroup()
-                            .addGap(90, 90, 90)
-                            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addGroup(jPanel13Layout.createSequentialGroup()
-                                    .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(54, 54, 54)
-                                    .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(52, 52, 52)
-                                    .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel13Layout.createSequentialGroup()
-                                    .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(54, 54, 54)
-                                    .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(52, 52, 52)
-                                    .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(jPanel13Layout.createSequentialGroup()
-                                    .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(54, 54, 54)
-                                    .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addGap(52, 52, 52)
-                                    .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
-        jPanel13Layout.setVerticalGroup(
-            jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 930, Short.MAX_VALUE)
-            .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(jPanel13Layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(39, 39, 39)
-                    .addGroup(jPanel13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(jPanel18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(jPanel19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGap(59, 59, 59)
-                    .addComponent(jPanel14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGap(0, 0, Short.MAX_VALUE)))
-        );
+        jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/9256H.png"))); // NOI18N
+        jLabel9.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jLabel9MouseClicked(evt);
+            }
+        });
+        jPanel13.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 600, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1040, Short.MAX_VALUE)
+            .addGap(0, 1055, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 1055, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 930, Short.MAX_VALUE)
+            .addGap(0, 968, Short.MAX_VALUE)
             .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                 .addGroup(layout.createSequentialGroup()
-                    .addGap(0, 0, Short.MAX_VALUE)
-                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jPanel13, javax.swing.GroupLayout.PREFERRED_SIZE, 968, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGap(0, 0, Short.MAX_VALUE)))
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jLabel3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MouseClicked
+       AlojamientoPg al = new AlojamientoPg();
+       al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/1500H.png")));
+       al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H1I2-246.png")));
+       al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H1I3-246.png")));
+       al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H1I4-246.png")));
+       al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H1I5-246.png")));
+       
+       al.titulo.setText("Renaissance Barcelona Hotel");
+       al.titDes.setText("Descripción");
+       al.Desc.setText("Renaissance Barcelona Hotel ofrece una terraza en la azotea y te sitúa a cinco minutos a pie de Paseo de Gracia. Regálate una sesión de masajes con piedras calientes, tratamientos faciales o aromaterapia en el spa y descubre los manjares de Rumbo Bar & Eatery.");
+       al.lblPre.setText("235€");
+       mostrarPanel(al);
+    }//GEN-LAST:event_jLabel3MouseClicked
+
+    private void jLabel4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel4MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H2500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H2I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H2I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H2I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H2I5-246.png")));
+
+        al.titulo.setText("Hotel Carlos III");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("El Hotel Carlos III goza de una ubicación céntrica en Águilas, a 50 metros de la playa y del ayuntamiento. El hotel ofrece conexión Wi-Fi gratuita, recepción 24 horas y habitaciones con aire acondicionado.");
+        al.lblPre.setText("130€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel4MouseClicked
+
+    private void jLabel1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel1MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H3500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H3I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H3I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H3I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H3I5-246.png")));
+
+        al.titulo.setText("Santa Barbara Golf and Ocean Club");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("El Santa Barbara Golf and Ocean Club se encuentra en Golf del Sur, a 100 metros de la playa. Ofrece piscina al aire libre, spa con bañera de hidromasaje y sauna y apartamentos con balcón privado.\n" +
+"\n" +
+"Todos los apartamentos del Santa Barbara Golf and Ocean Club disponen de zona de estar con sofás, TV de pantalla plana vía satélite y cocina con nevera. El baño privado incluye secador de pelo y artículos de aseo gratuitos. Algunas habitaciones tienen vistas al mar y aire acondicionado.");
+        al.lblPre.setText("300€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel1MouseClicked
+
+    private void jLabel5MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel5MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H4500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H4I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H4I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H4I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H4I5-246.png")));
+
+        al.titulo.setText("Hotel Puerta America");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("El Hotel Puerta America presenta un diseño exclusivo y vanguardista obra de arquitectos de fama mundial como Norman Foster, Jean Nouvel y Zaha Hadid.");
+        al.lblPre.setText("200€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jLabel7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel7MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H5500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H5I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H5I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H5I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H5I5-246.png")));
+
+        al.titulo.setText("Hotel Avenida");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("El Hotel Avenida está ubicado en el centro de Zaragoza, a 3 minutos a pie de la basílica del Pilar. Ofrece WiFi gratuita y habitaciones con aire acondicionado y TV de pantalla plana.");
+        al.lblPre.setText("180€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel7MouseClicked
+
+    private void jLabel6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel6MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H6500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H6I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H6I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H6I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H6I5-246.png")));
+
+        al.titulo.setText("Hotel Restaurant Les Brases");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("Este hotel de estilo alpino se encuentra en la pintoresca localidad de Sort, en medio del impresionante paisaje de montaña de los Pirineos españoles.");
+        al.lblPre.setText("148€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel6MouseClicked
+
+    private void jLabel8MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel8MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H7500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H7I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H7I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H7I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H7I5-246.png")));
+
+        al.titulo.setText("Hotel Urdanibia Park");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("El Hotel Urdanibia Park está situado frente al Real Golf Club de San Sebastián, a unos 10 minutos en coche del centro de la ciudad y de las playas de Hondarribia y Hendaya. Hay WiFi y aparcamiento exterior gratuitos.");
+        al.lblPre.setText("75€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel8MouseClicked
+
+    private void jLabel10MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel10MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H8500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H8I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H8I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H8I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H8I5-246.png")));
+
+        al.titulo.setText("Hotel Las Tablas");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("Hotel Las Tablas se encuentra en Daimiel, a 34 km de Puerta de Toledo y a 32 km de Museo El Quijote. Este hotel de 3 estrellas ofrece restaurante y tiene habitaciones con aire acondicionado, wifi gratis y baño privado. Hay parking privado en el propio alojamiento");
+        al.lblPre.setText("90€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel10MouseClicked
+
+    private void jLabel9MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel9MouseClicked
+         AlojamientoPg al = new AlojamientoPg();
+        al.iconG.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H9500.png")));
+        al.icon1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H9I2-246.png")));
+        al.icon2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H9I3-246.png")));
+        al.icon3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H9I4-246.png")));
+        al.icon4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/img/H9I5-246.png")));
+
+        al.titulo.setText("Elba Costa Ballena Beach & Thalasso Resort");
+        al.titDes.setText("Descripción");
+        al.Desc.setText("Este hotel de estilo mediterráneo está ubicado junto al campo de golf de Costa Ballena, a 2 minutos a pie de la playa. Cuenta con spa, piscina al aire libre y habitaciones con balcón privado.\n" +
+"\n" +
+"Las habitaciones del hotel Elba Costa Ballena Beach & Thalasso Resort disponen de aire acondicionado y baño privado con secador de pelo. Hay WiFi gratuita.");
+        al.lblPre.setText("105€");
+        mostrarPanel(al);
+    }//GEN-LAST:event_jLabel9MouseClicked
+        public void mostrarPanel(JPanel p){
+        //definimos tamaño y posición del panel
+        p.setSize(1040, 930);
+        p.setLocation(0,0);   
+
+        //quitamos la ventana anterior y mostramos la nueva
+        removeAll();
+        add(p, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
+        revalidate();
+        repaint();
+    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
-    private javax.swing.JPanel jPanel15;
-    private javax.swing.JPanel jPanel16;
-    private javax.swing.JPanel jPanel17;
-    private javax.swing.JPanel jPanel18;
-    private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel20;
-    private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel22;
-    private javax.swing.JPanel jPanel23;
     // End of variables declaration//GEN-END:variables
 }
