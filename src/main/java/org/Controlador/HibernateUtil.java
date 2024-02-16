@@ -83,7 +83,7 @@ public static SessionFactory getSessionFactory() {
      * @param user
      * @param pass 
      */
-    public static void actualizarUsuario(String user, String pass) {
+    public void actualizarUsuario(String user, String pass) {
         SessionFactory sessionFactory = HibernateUtil.buildSessionFactory();
         Session session = sessionFactory.openSession();
     try  {
@@ -101,8 +101,8 @@ public static SessionFactory getSessionFactory() {
             
 
             // Verificar si se proporciona una nueva contraseña y actualizarla
-            if (pass != null && !pass.isEmpty()) {
-                String hashPass = BCrypt.hashpw(pass, BCrypt.gensalt());
+            if (usr.getPassword() != null && !usr.getPassword().isEmpty()) {
+                String hashPass = BCrypt.hashpw(usr.getPassword(), BCrypt.gensalt());
                 usuario.setPassword(hashPass);
             }
 

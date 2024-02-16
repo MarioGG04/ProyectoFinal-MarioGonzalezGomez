@@ -25,13 +25,14 @@ public class MiCuenta extends javax.swing.JPanel {
     /**
      * Creates new form Apartamentos
      */
+    Usuario u;
     public MiCuenta() {
         initComponents();
         File f = new File("Logs.txt");
         BufferedReader br;
         try {
             br = new BufferedReader(new FileReader(f));
-        
+            actualizar.putClientProperty("FlatLaf.style", "arc: 15");
             email.putClientProperty("FlatLaf.style", "arc: 15");
             nombre.putClientProperty("FlatLaf.style", "arc: 15");
             apellidos.putClientProperty("FlatLaf.style", "arc: 15");
@@ -41,7 +42,7 @@ public class MiCuenta extends javax.swing.JPanel {
             String email2 = br.readLine();
             email.setText(email2);
             HibernateUtil uc = new HibernateUtil();
-            Usuario u = uc.obtenerUsuario(email2);
+            u = uc.obtenerUsuario(email2);
 
             if(u!=null){
                 nombre.setText(u.getNombre());
@@ -81,6 +82,7 @@ public class MiCuenta extends javax.swing.JPanel {
         nombre = new javax.swing.JTextField();
         apellidos = new javax.swing.JTextField();
         email = new javax.swing.JTextField();
+        actualizar = new javax.swing.JButton();
 
         setMinimumSize(new java.awt.Dimension(1040, 930));
         setPreferredSize(new java.awt.Dimension(1040, 930));
@@ -149,6 +151,16 @@ public class MiCuenta extends javax.swing.JPanel {
         email.setEditable(false);
         jPanel13.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 260, 40));
 
+        actualizar.setBackground(new java.awt.Color(225, 225, 225));
+        actualizar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
+        actualizar.setText("Actualizar datos");
+        actualizar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                actualizarActionPerformed(evt);
+            }
+        });
+        jPanel13.add(actualizar, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 450, 220, 60));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
@@ -172,6 +184,21 @@ public class MiCuenta extends javax.swing.JPanel {
     private void nombreActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_nombreActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_nombreActionPerformed
+
+    private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
+        HibernateUtil hu = new HibernateUtil();
+        if(nombre.isEditable()){
+            actualizar.setText("Actualizar datos");
+          
+            
+        }else{
+            actualizar.setText("Guardar");
+            nombre.setEditable(true);
+            apellidos.setEditable(true);
+            email.setEditable(true);
+            user.setEditable(true);
+        }
+    }//GEN-LAST:event_actualizarActionPerformed
         public void mostrarPanel(JPanel p){
         //definimos tamaño y posición del panel
         p.setSize(1040, 930);
@@ -185,6 +212,7 @@ public class MiCuenta extends javax.swing.JPanel {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton actualizar;
     private javax.swing.JTextField apellidos;
     public javax.swing.JLabel aux2;
     private javax.swing.JTextField email;

@@ -196,7 +196,7 @@ public class IniciarS extends javax.swing.JFrame {
         PagPrincipal pri = new PagPrincipal();
   
             if(hu.comprobarPass(email.getText(), pass.getText())){
-                pri.aux.setText(email.getText());
+                
                 bw.write(email.getText());
                 bw.close();
                 

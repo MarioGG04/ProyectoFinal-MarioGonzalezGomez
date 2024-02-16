@@ -239,7 +239,7 @@ public class Crear extends javax.swing.JFrame {
         HibernateUtil hu = new HibernateUtil();
         if(email.getText().contains("@")){
             
-            if(pass.getText().length()<8){
+            if(pass.getText().length()>8){
                 
             
                 hu.registrarUsuario(nombre.getText(), apellidos.getText(), usuario.getText(), email.getText(), pass.getText());
