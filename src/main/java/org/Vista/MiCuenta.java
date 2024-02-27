@@ -14,6 +14,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JPanel;
 import org.Controlador.HibernateUtil;
+import org.Controlador.UsuariosController;
 import org.model.Usuario;
 
 /**
@@ -51,7 +52,7 @@ public class MiCuenta extends javax.swing.JPanel {
             }
  
             br.close();
-            f.delete();
+            
         } catch (FileNotFoundException ex) {
             Logger.getLogger(MiCuenta.class.getName()).log(Level.SEVERE, null, ex);
         } catch (IOException ex) {
@@ -120,7 +121,7 @@ public class MiCuenta extends javax.swing.JPanel {
 
         jLabel1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel1.setText("Usuario:");
-        jPanel13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, -1, -1));
+        jPanel13.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
 
         jLabel3.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel3.setText("Nombre:");
@@ -132,10 +133,10 @@ public class MiCuenta extends javax.swing.JPanel {
 
         jLabel5.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jLabel5.setText("Email:");
-        jPanel13.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 280, -1, -1));
+        jPanel13.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 330, 60, -1));
 
         user.setEditable(false);
-        jPanel13.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 260, 40));
+        jPanel13.add(user, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 260, 40));
 
         nombre.setEditable(false);
         nombre.addActionListener(new java.awt.event.ActionListener() {
@@ -149,7 +150,7 @@ public class MiCuenta extends javax.swing.JPanel {
         jPanel13.add(apellidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 220, 260, 40));
 
         email.setEditable(false);
-        jPanel13.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 270, 260, 40));
+        jPanel13.add(email, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 320, 260, 40));
 
         actualizar.setBackground(new java.awt.Color(225, 225, 225));
         actualizar.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
@@ -187,15 +188,27 @@ public class MiCuenta extends javax.swing.JPanel {
 
     private void actualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_actualizarActionPerformed
         HibernateUtil hu = new HibernateUtil();
+        UsuariosController uc = new UsuariosController();
+        
         if(nombre.isEditable()){
+            
+            u.setNombre(nombre.getText());
+            u.setApellido(apellidos.getText());
+           // u.setEmail(email.getText());
+            u.setUsername(user.getText());
+ 
+            uc.modificarUsuario(u);
+            
             actualizar.setText("Actualizar datos");
-          
+            nombre.setEditable(false);
+            apellidos.setEditable(false);
+            user.setEditable(false);
             
         }else{
             actualizar.setText("Guardar");
             nombre.setEditable(true);
             apellidos.setEditable(true);
-            email.setEditable(true);
+         //   email.setEditable(true);
             user.setEditable(true);
         }
     }//GEN-LAST:event_actualizarActionPerformed

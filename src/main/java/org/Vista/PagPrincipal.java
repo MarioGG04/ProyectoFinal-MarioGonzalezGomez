@@ -6,6 +6,8 @@ package org.Vista;
 
 import com.formdev.flatlaf.FlatLightLaf;
 import java.awt.Color;
+import java.io.File;
+import java.io.IOException;
 import javax.swing.JPanel;
 
 /**
@@ -250,6 +252,12 @@ public class PagPrincipal extends javax.swing.JFrame {
     }//GEN-LAST:event_pResMouseClicked
 
     private void cerrarMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_cerrarMouseClicked
+        try{
+            File f = new File("Logs.txt");
+            f.delete();
+        }catch(Exception e){
+            e.printStackTrace();
+        }
         System.exit(0);
     }//GEN-LAST:event_cerrarMouseClicked
 
