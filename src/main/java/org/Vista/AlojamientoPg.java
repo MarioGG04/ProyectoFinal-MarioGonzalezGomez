@@ -4,6 +4,23 @@
  */
 package org.Vista;
 
+import java.io.BufferedReader;
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileReader;
+import java.io.IOException;
+import java.sql.Date;
+import java.time.LocalDate;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import org.Controlador.AlojamientosController;
+import org.Controlador.HabitacionesController;
+import org.Controlador.HibernateUtil;
+import org.Controlador.ReservasController;
+import org.model.Habitaciones;
+import org.model.Usuario;
+import org.model.Hoteles;
+
 /**
  *
  * @author Mario González Gómez
@@ -15,7 +32,7 @@ public class AlojamientoPg extends javax.swing.JPanel {
      */
     public AlojamientoPg() {
         initComponents();
-        
+        id.setVisible(false);
         
     }
 
@@ -46,12 +63,12 @@ public class AlojamientoPg extends javax.swing.JPanel {
         precio = new org.Vista.Paneles();
         lblPre = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jTextArea1 = new javax.swing.JTextArea();
         desayuno = new org.Vista.Paneles();
         jLabel5 = new javax.swing.JLabel();
         titDes = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         Desc = new javax.swing.JTextArea();
+        id = new javax.swing.JLabel();
 
         setMinimumSize(new java.awt.Dimension(1040, 930));
         setPreferredSize(new java.awt.Dimension(1040, 930));
@@ -189,21 +206,20 @@ public class AlojamientoPg extends javax.swing.JPanel {
         lblPre.setFont(new java.awt.Font("Century Gothic", 1, 18)); // NOI18N
         lblPre.setText("jLabel1");
         lblPre.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        precio.add(lblPre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 70, 28));
+        precio.add(lblPre, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 30, 60, 28));
 
         jButton1.setBackground(new java.awt.Color(153, 153, 153));
         jButton1.setFont(new java.awt.Font("Century Gothic", 1, 14)); // NOI18N
         jButton1.setForeground(new java.awt.Color(255, 255, 255));
         jButton1.setText("Reservar ya");
-        jButton1.setEnabled(false);
-        precio.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, 120, 40));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        precio.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 80, 120, 40));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jTextArea1.setText("Por problemas de ultima\nhora no he podido terminar\nde gestionar las reservas\nlo incluire para el proyecto\nde final de grado");
-        precio.add(jTextArea1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 90, 180, -1));
-
-        jPanel13.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 600, 220, 260));
+        jPanel13.add(precio, new org.netbeans.lib.awtextra.AbsoluteConstraints(720, 640, 220, 160));
 
         desayuno.setMinimumSize(new java.awt.Dimension(50, 50));
         desayuno.setRoundBottomLeft(15);
@@ -252,6 +268,7 @@ public class AlojamientoPg extends javax.swing.JPanel {
         jScrollPane1.setViewportView(Desc);
 
         jPanel13.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 770, 560, 100));
+        jPanel13.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 560, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
         this.setLayout(layout);
@@ -273,6 +290,38 @@ public class AlojamientoPg extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        Usuario u;
+        Hoteles ht;
+        Habitaciones h;
+        ReservasController rc = new ReservasController();
+        AlojamientosController ac = new AlojamientosController();
+        HabitacionesController hc = new HabitacionesController();
+        File f = new File("Logs.txt");
+        BufferedReader br;
+        try {
+            int idHo = Integer.parseInt(id.getText());
+            br = new BufferedReader(new FileReader(f));
+
+            String email2 = br.readLine();
+
+            HibernateUtil uc = new HibernateUtil();
+            u = uc.obtenerUsuario(email2);
+            ht = ac.obtenerAlojamientos(idHo);
+            h = hc.filtrarHabitacion(ht);
+            Date fechaEntrada = Date.valueOf(LocalDate.now());
+            Date fechaSalida = Date.valueOf(LocalDate.now());
+
+            rc.hacerReserva(u, h, ht, fechaEntrada, fechaSalida, h.getPrecio());
+            br.close();
+
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(MiCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(MiCuenta.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton1ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JTextArea Desc;
@@ -284,6 +333,7 @@ public class AlojamientoPg extends javax.swing.JPanel {
     public javax.swing.JLabel icon3;
     public javax.swing.JLabel icon4;
     public javax.swing.JLabel iconG;
+    public javax.swing.JLabel id;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
@@ -293,7 +343,6 @@ public class AlojamientoPg extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel13;
     private javax.swing.JPanel jPanel14;
     private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTextArea jTextArea1;
     public javax.swing.JLabel lblPre;
     private org.Vista.Paneles precio;
     public javax.swing.JLabel titDes;

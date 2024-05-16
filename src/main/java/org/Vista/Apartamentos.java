@@ -186,6 +186,7 @@ public class Apartamentos extends javax.swing.JPanel {
                 + "Está en São Paulo, a 4,2 km de Parque Ibirapuera y a 5,4 km de Pabellón de Ciccillo Matarazzo.\n"
                 + "Este apartamento dispone de parking privado gratis, recepción 24 horas y wifi gratis.");
         al.lblPre.setText("142€");
+        al.id.setText("10");
         mostrarPanel(al);
     }//GEN-LAST:event_Ap1MouseClicked
     /**
@@ -206,6 +207,7 @@ public class Apartamentos extends javax.swing.JPanel {
 "\n" +
 "Los apartamentos del Aparthotel Puerto Cala Vadella cuentan con cocina, donde usted puede preparar sus propias comidas para toda la familia.");
         al.lblPre.setText("150€");
+        al.id.setText("11");
         mostrarPanel(al);    }//GEN-LAST:event_Ap2MouseClicked
     /**
      * 
@@ -224,6 +226,7 @@ AlojamientoPg al = new AlojamientoPg();
                 + "para adultos y 2 piscinas adicionales para niños.\n"
                 + " Además, se encuentran a 250 metros de la playa Playazo de Vera, en la costa de Almería.");
         al.lblPre.setText("77€");
+        al.id.setText("12");
         mostrarPanel(al);    }//GEN-LAST:event_Ap3MouseClicked
     /**
      * 
@@ -243,6 +246,7 @@ AlojamientoPg al = new AlojamientoPg();
                 + "Baño privado completo en vivienda compartida. "
                 + "Puedes usar la cocina, con nevera individual y el jardín. Wifi.");
         al.lblPre.setText("40€");
+        al.id.setText("13");
         mostrarPanel(al);    }//GEN-LAST:event_Ap4MouseClicked
     /**
      * 
@@ -261,6 +265,7 @@ AlojamientoPg al = new AlojamientoPg();
 "Silencio absoluto más allá de el de los animales.\n" +
 "Tu paso previo a vivir en la montaña.");
         al.lblPre.setText("200€");
+        al.id.setText("14");
         mostrarPanel(al);    }//GEN-LAST:event_Ap5MouseClicked
     /**
      * 
@@ -277,6 +282,7 @@ AlojamientoPg al = new AlojamientoPg();
         al.titulo.setText("Habitación en chalet de lujo");
         al.Desc.setText("Descansa y relájate en este espacio tranquilo y elegante");
         al.lblPre.setText("90€");
+        al.id.setText("15");
         mostrarPanel(al);    }//GEN-LAST:event_Ap6MouseClicked
     /**
      * 
@@ -295,6 +301,7 @@ AlojamientoPg al = new AlojamientoPg();
                 + "Se trata de una habitación doble que cuenta con todas las comodidades como televisión con netflix, HBO\n"
                 + "y demás plataformas, armario amplio, y termostato individual para regulación de la temperatura de la calefacción (suelo radiante).");
         al.lblPre.setText("73€");
+        al.id.setText("16");
         mostrarPanel(al);    }//GEN-LAST:event_Ap7MouseClicked
     /**
      * 
@@ -313,6 +320,7 @@ AlojamientoPg al = new AlojamientoPg();
                 + "Se accede a ella desde una pista de tierra de 5,5 km sale de Santa Cruz del Retamar, 10 a 20min.\n"
                 + "Cuando llueve el único acceso es por Torre de Esteban de Hambram.");
         al.lblPre.setText("405€");
+        al.id.setText("17");
         mostrarPanel(al);    }//GEN-LAST:event_Ap8MouseClicked
     /**
      * 
@@ -332,6 +340,7 @@ AlojamientoPg al = new AlojamientoPg();
                 + "Tiene una superficie de 160m2 útiles, con todo tipo de comodidades para disfrutar en familia o amigos desde un fin de semana, viajes de negocios,\n"
                 + "larga estancia o  unas buenas vacaciones.");
         al.lblPre.setText("90€");
+        al.id.setText("18");
         mostrarPanel(al);    }//GEN-LAST:event_Ap9MouseClicked
         
     /**

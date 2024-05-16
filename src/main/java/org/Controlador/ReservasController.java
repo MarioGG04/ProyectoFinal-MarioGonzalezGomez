@@ -4,6 +4,7 @@
  */
 package org.Controlador;
 
+import java.sql.Date;
 import java.util.List;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -29,16 +30,25 @@ public class ReservasController {
     public List<Reservas> mostrarReservas(Usuario u) {
 
             Session sesion = sessionFactory.openSession();
-            //Reservas reserv = new Reservas();
-            //ReservasId rid = new ReservasId();
-            //rid.setUsuario(u.getId());
-            //rid.setHabitacion(h.getNumero());
-            //rid.setHotel(ht.getId());
-            //reserv.setId(rid);
-            Query q = sesion.createQuery("from Reservas where usuario = :usuario");
-            q.setParameter("usuario", u);
+            Reservas reserv = new Reservas();
+            
+           // Query q = sesion.createQuery("from Reservas where usuario = :usuario");
+           // q.setParameter("usuario", u.getId());
+            Query q = sesion.createQuery("from Reservas");
             List<Reservas> reservas = q.getResultList();
 
             return reservas;
+    }
+    
+    public void hacerReserva(Usuario u, Habitaciones h, Hoteles ht, Date fechaEntrada, Date fechaSalida, double precio){
+        
+        Session sesion = sessionFactory.openSession();
+        sesion.beginTransaction();
+        ReservasId rId = new ReservasId(h.getNumero(), ht.getId(), u.getId());
+        Reservas r = new Reservas(rId, ht, u, h, fechaEntrada, fechaSalida, precio);
+  
+        sesion.save(r);
+        sesion.getTransaction().commit();
+        
     }
 }

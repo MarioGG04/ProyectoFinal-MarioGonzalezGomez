@@ -29,10 +29,10 @@ public class Reservas implements java.io.Serializable {
     @JoinColumn(name = "habitacion",referencedColumnName = "numero", nullable = false, insertable = false, updatable = false)
     private Habitaciones habitaciones;
 
-    @Column(name = "fecha_entrada", nullable = false)
+    @Column(name = "fechaEntrada", nullable = false)
     private Date fechaEntrada;
 
-    @Column(name = "fecha_salida", nullable = false)
+    @Column(name = "fechaSalida", nullable = false)
     private Date fechaSalida;
 
     @Column(name = "precio", nullable = false)

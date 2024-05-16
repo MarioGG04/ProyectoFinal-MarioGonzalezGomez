@@ -47,6 +47,48 @@ public class Hoteles implements java.io.Serializable {
         this.reservas = reservas;
     }
 
-    // Getters and setters
+      // Setter y Getter para el campo "id"
+    public int getId() {
+        return id;
+    }
 
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    // Setter y Getter para el campo "nombre"
+    public String getNombre() {
+        return nombre;
+    }
+
+    public void setNombre(String nombre) {
+        this.nombre = nombre;
+    }
+
+    // Setter y Getter para el campo "localidad"
+    public String getLocalidad() {
+        return localidad;
+    }
+
+    public void setLocalidad(String localidad) {
+        this.localidad = localidad;
+    }
+
+    // Setter y Getter para el campo "provincia"
+    public String getProvincia() {
+        return provincia;
+    }
+
+    public void setProvincia(String provincia) {
+        this.provincia = provincia;
+    }
+
+    // Setter y Getter para el campo "calificacion"
+    public int getCalificacion() {
+        return calificacion;
+    }
+
+    public void setCalificacion(int calificacion) {
+        this.calificacion = calificacion;
+    }
 }

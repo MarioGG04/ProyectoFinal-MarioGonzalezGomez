@@ -187,6 +187,7 @@ public class Hoteles extends javax.swing.JPanel {
        al.Desc.setText("Renaissance Barcelona Hotel ofrece una terraza en la azotea y te sitúa a cinco minutos a pie de Paseo de Gracia.\n"
                + "Regálate una sesión de masajes con piedras calientes, tratamientos faciales o aromaterapia en el spa y descubre los manjares de Rumbo Bar & Eatery.");
        al.lblPre.setText("235€");
+       al.id.setText("1");
        mostrarPanel(al);
     }//GEN-LAST:event_jLabel3MouseClicked
     /**
@@ -206,6 +207,7 @@ public class Hoteles extends javax.swing.JPanel {
         al.Desc.setText("El Hotel Carlos III goza de una ubicación céntrica en Águilas, a 50 metros de la playa y del ayuntamiento.\n"
                 + "El hotel ofrece conexión Wi-Fi gratuita, recepción 24 horas y habitaciones con aire acondicionado.");
         al.lblPre.setText("130€");
+        al.id.setText("2");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel4MouseClicked
     /**
@@ -228,6 +230,7 @@ public class Hoteles extends javax.swing.JPanel {
 "Todos los apartamentos del Santa Barbara Golf and Ocean Club disponen de zona de estar con sofás, TV de pantalla plana vía satélite y cocina con nevera.\n"
                 + "El baño privado incluye secador de pelo y artículos de aseo gratuitos. Algunas habitaciones tienen vistas al mar y aire acondicionado.");
         al.lblPre.setText("300€");
+        al.id.setText("3");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel1MouseClicked
     /**
@@ -246,6 +249,7 @@ public class Hoteles extends javax.swing.JPanel {
         al.titDes.setText("Descripción");
         al.Desc.setText("El Hotel Puerta America presenta un diseño exclusivo y vanguardista obra de arquitectos de fama mundial como Norman Foster, Jean Nouvel y Zaha Hadid.");
         al.lblPre.setText("200€");
+        al.id.setText("4");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel5MouseClicked
     /**
@@ -265,6 +269,7 @@ public class Hoteles extends javax.swing.JPanel {
         al.Desc.setText("El Hotel Avenida está ubicado en el centro de Zaragoza, a 3 minutos a pie de la basílica del Pilar.\n"
                 + "Ofrece WiFi gratuita y habitaciones con aire acondicionado y TV de pantalla plana.");
         al.lblPre.setText("180€");
+        al.id.setText("5");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel7MouseClicked
     /**
@@ -283,6 +288,7 @@ public class Hoteles extends javax.swing.JPanel {
         al.titDes.setText("Descripción");
         al.Desc.setText("Este hotel de estilo alpino se encuentra en la pintoresca localidad de Sort, en medio del impresionante paisaje de montaña de los Pirineos españoles.");
         al.lblPre.setText("148€");
+        al.id.setText("6");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel6MouseClicked
     /**
@@ -302,6 +308,7 @@ public class Hoteles extends javax.swing.JPanel {
         al.Desc.setText("El Hotel Urdanibia Park está situado frente al Real Golf Club de San Sebastián, a unos 10 minutos en coche del centro\n"
                 + "de la ciudad y de las playas de Hondarribia y Hendaya. Hay WiFi y aparcamiento exterior gratuitos.");
         al.lblPre.setText("75€");
+        al.id.setText("7");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel8MouseClicked
     /**
@@ -322,6 +329,7 @@ public class Hoteles extends javax.swing.JPanel {
                 + "Este hotel de 3 estrellas ofrece restaurante y tiene habitaciones con aire acondicionado, wifi gratis y baño privado.\n"
                 + "Hay parking privado en el propio alojamiento");
         al.lblPre.setText("90€");
+        al.id.setText("8");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel10MouseClicked
     /**
@@ -343,6 +351,7 @@ public class Hoteles extends javax.swing.JPanel {
                 "\n" +
                 "Las habitaciones del hotel Elba Costa Ballena Beach & Thalasso Resort disponen de aire acondicionado y baño privado con secador de pelo. Hay WiFi gratuita.");
         al.lblPre.setText("105€");
+        al.id.setText("9");
         mostrarPanel(al);
     }//GEN-LAST:event_jLabel9MouseClicked
     /**

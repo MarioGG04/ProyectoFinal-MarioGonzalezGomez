@@ -20,6 +20,9 @@ public class Crear extends javax.swing.JFrame {
      */
     public Crear() {
         initComponents();
+        avisoPass1.setVisible(false);
+        avisoPass2.setVisible(false);
+        avisoEmail.setVisible(false);
         nombre.putClientProperty( "JTextField.placeholderText", "Intruduce tu nombre");
         apellidos.putClientProperty( "JTextField.placeholderText", "Intruduce tus apellidos");
         email.putClientProperty( "JTextField.placeholderText", "Intruduce tu Email");
@@ -60,6 +63,11 @@ public class Crear extends javax.swing.JFrame {
         nombre = new javax.swing.JTextField();
         usuario = new javax.swing.JTextField();
         lblPass2 = new javax.swing.JLabel();
+        avisoPass1 = new javax.swing.JLabel();
+        avisoEmail = new javax.swing.JLabel();
+        lblPass3 = new javax.swing.JLabel();
+        pass1 = new javax.swing.JPasswordField();
+        avisoPass2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -104,7 +112,7 @@ public class Crear extends javax.swing.JFrame {
                 continuarActionPerformed(evt);
             }
         });
-        jPanel2.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 600, 144, 53));
+        jPanel2.add(continuar, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 740, 144, 53));
 
         lblPass.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblPass.setForeground(new java.awt.Color(153, 153, 153));
@@ -140,7 +148,7 @@ public class Crear extends javax.swing.JFrame {
                 btnIniActionPerformed(evt);
             }
         });
-        jPanel2.add(btnIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 600, 140, 50));
+        jPanel2.add(btnIni, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 740, 140, 50));
 
         lblEmail1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
         lblEmail1.setForeground(new java.awt.Color(153, 153, 153));
@@ -203,6 +211,27 @@ public class Crear extends javax.swing.JFrame {
         lblPass2.setText("Usuario");
         jPanel2.add(lblPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 290, 60, -1));
 
+        avisoPass1.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        avisoPass1.setForeground(new java.awt.Color(255, 0, 0));
+        avisoPass1.setText("La contraseña tiene que tener como minimo 8 caracteres.");
+        jPanel2.add(avisoPass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 570, 350, -1));
+
+        avisoEmail.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        avisoEmail.setForeground(new java.awt.Color(255, 0, 0));
+        avisoEmail.setText("No es una direccion de correo valida. (ejemplo@mail.com)");
+        jPanel2.add(avisoEmail, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 470, 360, -1));
+
+        lblPass3.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        lblPass3.setForeground(new java.awt.Color(153, 153, 153));
+        lblPass3.setText("Introduce la contraseña otra vez");
+        jPanel2.add(lblPass3, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 600, -1, -1));
+        jPanel2.add(pass1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 620, 530, 60));
+
+        avisoPass2.setFont(new java.awt.Font("Century Gothic", 0, 12)); // NOI18N
+        avisoPass2.setForeground(new java.awt.Color(255, 0, 0));
+        avisoPass2.setText("Las contraseñas deben ser iguales.");
+        jPanel2.add(avisoPass2, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 680, 230, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -211,7 +240,7 @@ public class Crear extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 682, Short.MAX_VALUE)
+            .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, 818, Short.MAX_VALUE)
         );
 
         pack();
@@ -238,17 +267,24 @@ public class Crear extends javax.swing.JFrame {
     private void continuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_continuarActionPerformed
         HibernateUtil hu = new HibernateUtil();
         if(email.getText().contains("@")){
-            
+            avisoEmail.setVisible(false);
+
             if(pass.getText().length()>8){
-                
+                avisoPass1.setVisible(false);
             
                 hu.registrarUsuario(nombre.getText(), apellidos.getText(), usuario.getText(), email.getText(), pass.getText());
-                 JOptionPane.showMessageDialog(null, "Usuario creado correctamente.\nPulsa el botón de iniciar sesión.");
+                
+                if(pass.getText().equals(pass1.getText())){     
+                    avisoPass2.setVisible(false);
+                    JOptionPane.showMessageDialog(null, "Usuario creado correctamente.\nPulsa el botón de iniciar sesión.");
+                }else{
+                    avisoPass2.setVisible(true);
+                }
             }else{
-                JOptionPane.showMessageDialog(null, "La contraseña tiene que tener como minimo 8 caracteres.", "Error", JOptionPane.ERROR_MESSAGE);
+                avisoPass1.setVisible(true);            
             }
         }else{
-            JOptionPane.showMessageDialog(null, "No es una direccion de correo valida.", "Error", JOptionPane.ERROR_MESSAGE);
+            avisoEmail.setVisible(true);
 
         }
         
@@ -349,6 +385,9 @@ public class Crear extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField apellidos;
+    private javax.swing.JLabel avisoEmail;
+    private javax.swing.JLabel avisoPass1;
+    private javax.swing.JLabel avisoPass2;
     private javax.swing.JButton btnIni;
     private javax.swing.JPanel cerrar;
     private javax.swing.JButton continuar;
@@ -361,9 +400,11 @@ public class Crear extends javax.swing.JFrame {
     private javax.swing.JLabel lblPass;
     private javax.swing.JLabel lblPass1;
     private javax.swing.JLabel lblPass2;
+    private javax.swing.JLabel lblPass3;
     private javax.swing.JLabel lblX;
     private javax.swing.JTextField nombre;
     private javax.swing.JPasswordField pass;
+    private javax.swing.JPasswordField pass1;
     private javax.swing.JTextField usuario;
     // End of variables declaration//GEN-END:variables
 }
